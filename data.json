@@ -40,38 +40,10 @@
     "events": [
         {
             "id": 1,
-            "name": "Éves Tech Summit 2024",
-            "date": "2024-03-15",
-            "location": "Budapest, Millenáris Park",
-            "description": "Az éves nagyrendezvényünk, ahol bemutatjuk a legújabb fejlesztéseinket és vendégelőadókat hívunk a tech világból. Idén a mesterséges intelligencia a fókusz."
-        },
-        {
-            "id": 2,
-            "name": "Tavaszi Hackathon",
-            "date": "2024-04-20",
-            "location": "Budapest, Bálna",
-            "description": "24 órás programozói verseny, ahol csapatok dolgoznak innovatív megoldásokon fenntarthatósági témában. Nyeremények és pizza biztosítva!"
-        },
-        {
-            "id": 3,
-            "name": "Workshop: Modern Frontend",
-            "date": "2024-05-10",
-            "location": "Online / Zoom",
-            "description": "Gyakorlati workshop a legújabb webes technológiákról. React Server Components, Next.js 14 és CSS újdonságok."
-        },
-        {
-            "id": 4,
-            "name": "Nyári Csapatépítő",
-            "date": "2024-06-25",
-            "location": "Velencei-tó",
-            "description": "Kötetlen szórakozás, sport és kikapcsolódás a csapat számára. SUP, strandröplabda és bográcsozás."
-        },
-        {
-            "id": 5,
-            "name": "AI Meetup",
-            "date": "2024-09-05",
-            "location": "Budapest, Create26",
-            "description": "Szakmai beszélgetés az LLM-ek jövőjéről és alkalmazási lehetőségeiről vállalati környezetben."
+            "name": "Egy mindenkiért, mindenki egyért Nedvesest",
+            "date": "2026-02-21",
+            "location": "Miskolci Egyetem, E/3 oldalszárny",
+            "description": "Mi, a Társas Társaság Asztal Társaság úgy határozánk, hogy elérkezett az idő a Társaság és szimpatizánsai alkoholtűrő képességének próbatételére. E jeles alkalmat az Egy mindenkiért, mindenki egyért Nedvesest hivatott megkoronázni."
         }
     ]
 }
