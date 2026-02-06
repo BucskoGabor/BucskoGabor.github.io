@@ -228,7 +228,7 @@ nav {
     height: auto;
     margin: 0 auto 2rem auto;
     display: block;
-    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+    mix-blend-mode: multiply;
 }
 
 .lead-text {
