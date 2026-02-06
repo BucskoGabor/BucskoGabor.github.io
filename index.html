@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Collective</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+        <div class="globe globe-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="glass-header">
+        <div class="logo">Nexus Collective</div>
+        <nav>
+            <button class="nav-btn active" data-tab="about">Rólunk</button>
+            <button class="nav-btn" data-tab="members">Tagok</button>
+            <button class="nav-btn" data-tab="events">Események</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- About Section -->
+        <section id="about" class="section active fade-in">
+            <div class="about-card glass-card">
+                <h1 id="company-name">Loading...</h1>
+                <p id="company-desc" class="lead-text">Kérlek várj, az adatok betöltése folyamatban...</p>
+                <div class="vision-box">
+                    <h3>Víziónk</h3>
+                    <p id="company-vision">...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Members Section -->
+        <section id="members" class="section fade-in hidden">
+            <div class="section-header">
+                <h2>Tagjaink</h2>
+                <p>Ismerd meg a csapatot</p>
+            </div>
+            <div id="members-grid" class="members-grid">
+                <!-- Members will be injected here -->
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="section fade-in hidden">
+            <div class="section-header">
+                <h2>Események</h2>
+                <p>Csatlakozz programjainkhoz</p>
+            </div>
+            <div class="table-container glass-card">
+                <table class="events-table">
+                    <thead>
+                        <tr>
+                            <th>Esemény Neve</th>
+                            <th>Dátum</th>
+                            <th>Helyszín</th>
+                            <th>Részletek</th>
+                        </tr>
+                    </thead>
+                    <tbody id="events-body">
+                        <!-- Events will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Event Details Modal/Dialog -->
+    <dialog id="event-dialog" class="glass-dialog">
+        <div class="dialog-content">
+            <button id="close-dialog" class="close-btn">&times;</button>
+            <h2 id="dialog-title">Esemény címe</h2>
+            <div class="dialog-details">
+                <div class="detail-item">
+                    <span class="icon">📅</span>
+                    <span id="dialog-date">2024...</span>
+                </div>
+                <div class="detail-item">
+                    <span class="icon">📍</span>
+                    <span id="dialog-location">Helyszín</span>
+                </div>
+            </div>
+            <hr>
+            <p id="dialog-desc">Leírás...</p>
+        </div>
+    </dialog>
+
+    <footer>
+        <p>&copy; 2024 Nexus Collective. Minden jog fenntartva.</p>
+    </footer>
+</body>
+</html>
