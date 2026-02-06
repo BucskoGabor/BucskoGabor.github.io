@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const companyNameEl = document.getElementById('company-name');
     const companyDescEl = document.getElementById('company-desc');
     const companyVisionEl = document.getElementById('company-vision');
+    const companyCrestEl = document.getElementById('company-crest');
 
     // Members Grid
     const membersGridEl = document.getElementById('members-grid');
@@ -67,6 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
         companyNameEl.textContent = company.name;
         companyDescEl.textContent = company.description;
         companyVisionEl.textContent = company.vision;
+
+        if (company.coatOfArms) {
+            companyCrestEl.src = company.coatOfArms;
+            companyCrestEl.style.display = 'block';
+        }
     }
 
     function renderMembers(members) {

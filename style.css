@@ -1,15 +1,17 @@
 /* Global Styles */
 :root {
-    --bg-color: #0f172a;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
+    --bg-color: #f8fafc;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
     --accent-color: #6366f1;
-    --accent-glow: #818cf8;
-    --glass-bg: rgba(30, 41, 59, 0.4);
-    --glass-border: rgba(255, 255, 255, 0.05);
-    --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    --card-hover-bg: rgba(30, 41, 59, 0.6);
+    --accent-glow: #4f46e5;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    --card-hover-bg: rgba(255, 255, 255, 0.9);
     --font-family: 'Outfit', sans-serif;
+    --nav-active-bg: rgba(99, 102, 241, 0.1);
+    --nav-active-text: #4f46e5;
 }
 
 * {
@@ -117,9 +119,12 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #fff, #94a3b8);
+    color: var(--accent-glow);
+    /* Removed gradient text for better visibility in light mode, or use a darker gradient */
+    background: linear-gradient(135deg, #1e293b, #4f46e5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 nav {
@@ -138,17 +143,18 @@ nav {
     background: transparent;
     font-family: inherit;
     font-size: 1rem;
+    font-weight: 500;
 }
 
 .nav-btn:hover {
     color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .nav-btn.active {
-    background: rgba(99, 102, 241, 0.2);
-    color: var(--text-primary);
-    border-color: rgba(99, 102, 241, 0.3);
+    background: var(--nav-active-bg);
+    color: var(--nav-active-text);
+    border-color: rgba(99, 102, 241, 0.2);
 }
 
 /* Main Content */
@@ -211,9 +217,18 @@ nav {
 .about-card h1 {
     font-size: 3rem;
     margin-bottom: 1.5rem;
-    background: linear-gradient(to right, #818cf8, #c084fc);
+    background: linear-gradient(to right, #4f46e5, #0ea5e9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.company-crest {
+    width: 150px;
+    height: auto;
+    margin: 0 auto 2rem auto;
+    display: block;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
 }
 
 .lead-text {
@@ -223,10 +238,11 @@ nav {
 }
 
 .vision-box {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.5);
     padding: 2rem;
     border-radius: 16px;
     border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
 }
 
 .vision-box h3 {
@@ -324,7 +340,7 @@ nav {
 }
 
 .events-table tbody tr:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.02);
 }
 
 .events-table tbody tr:last-child td {
@@ -342,7 +358,7 @@ nav {
     transition: all 0.2s;
 }
 
-.events-table tr:hover .view-btn {
+.view-btn:hover {
     background: var(--accent-glow);
     color: white;
 }
@@ -359,17 +375,17 @@ dialog {
 }
 
 dialog::backdrop {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
 }
 
 .dialog-content {
-    background: #1e293b;
+    background: #ffffff;
     border: 1px solid var(--glass-border);
     padding: 2rem;
     border-radius: 24px;
     position: relative;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
 }
 
 .close-btn {
