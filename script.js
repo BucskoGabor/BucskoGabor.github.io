@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements
     const navButtons = document.querySelectorAll('.nav-btn');
     const sections = document.querySelectorAll('.section');
-    
+
     // About Elements
     const companyNameEl = document.getElementById('company-name');
     const companyDescEl = document.getElementById('company-desc');
@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="member-info">
                     <h3>${member.name}</h3>
                     <span class="member-role">${member.role}</span>
-                    <span class="member-joined">Csatlakozott: ${formatDate(member.joined)}</span>
                 </div>
             </div>
         `).join('');
@@ -119,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dialogLocation.textContent = event.location;
         dialogDesc.textContent = event.description;
         dialog.showModal();
-        
+
         // Close when clicking outside content (backdrop)
         dialog.addEventListener('click', backdropClickHandler);
     }
@@ -127,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function backdropClickHandler(e) {
         const rect = dialog.getBoundingClientRect();
         const isInDialog = (rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
-          rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
+            rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
 
         if (!isInDialog) {
             dialog.close();

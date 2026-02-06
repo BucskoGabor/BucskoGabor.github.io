@@ -76,12 +76,22 @@ body {
 }
 
 @keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(20px, -20px); }
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, -20px);
+    }
 }
 
 /* Glassmorphism Utilities */
-.glass-header, .glass-card, .glass-dialog, .nav-btn {
+.glass-header,
+.glass-card,
+.glass-dialog,
+.nav-btn {
     background: var(--glass-bg);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -150,7 +160,8 @@ nav {
 }
 
 .section {
-    display: none; /* Controlled by JS */
+    display: none;
+    /* Controlled by JS */
 }
 
 .section.active {
@@ -163,8 +174,15 @@ nav {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .section-header {
@@ -225,7 +243,8 @@ nav {
 
 @media(min-width: 768px) {
     .members-grid {
-        grid-template-columns: 1fr 1fr; /* 2 columns as requested */
+        grid-template-columns: 1fr 1fr;
+        /* 2 columns as requested */
     }
 }
 
@@ -243,7 +262,7 @@ nav {
 .member-card:hover {
     transform: translateY(-5px);
     background: var(--card-hover-bg);
-    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
 }
 
 .member-img {
@@ -284,7 +303,8 @@ nav {
     border-collapse: collapse;
 }
 
-.events-table th, .events-table td {
+.events-table th,
+.events-table td {
     padding: 1rem;
     text-align: left;
     border-bottom: 1px solid var(--glass-border);

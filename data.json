@@ -1,88 +1,76 @@
 {
-  "company": {
-    "name": "Nexus Collective",
-    "description": "Üdvözöljük a Nexus Collective oldalán. Egy innovatív szakemberekből álló társaság vagyunk, akik a jövő technológiáit építik. Célunk a tudásmegosztás, a közös fejlődés és a szakmai kapcsolatok építése egy inspiráló környezetben.",
-    "vision": "A technológia és az emberi kreativitás szinergiája."
-  },
-  "members": [
-    {
-      "id": 1,
-      "name": "Kovács Anna",
-      "role": "Alapító & CEO",
-      "image": "https://placehold.co/400x400/4f46e5/ffffff?text=KA",
-      "joined": "2023-01-10"
+    "company": {
+        "name": "Társas Társaság Asztal Társaság",
+        "description": "Üdvözöljük a Társas Társaság Asztal Társaság oldalán. A társaságunk Selmecz diákhagyományait ápolja, és az ott játszott társasokra specializálódott. A társaságunkat 2025-ben alapítottuk, és azóta is töretlenül működik.",
+        "vision": "Feléleszteni a manapság már szűkkörben játszott társasokat, és megismertetni azokat a fiatalabb generációkkal."
     },
-    {
-      "id": 2,
-      "name": "Nagy Gábor",
-      "role": "CTO",
-      "image": "https://placehold.co/400x400/0ea5e9/ffffff?text=NG",
-      "joined": "2023-02-15"
-    },
-    {
-      "id": 3,
-      "name": "Szabó Eszter",
-      "role": "Design Lead",
-      "image": "https://placehold.co/400x400/ec4899/ffffff?text=SZE",
-      "joined": "2023-03-01"
-    },
-    {
-      "id": 4,
-      "name": "Tóth Péter",
-      "role": "Senior Developer",
-      "image": "https://placehold.co/400x400/8b5cf6/ffffff?text=TP",
-      "joined": "2023-04-12"
-    },
-    {
-      "id": 5,
-      "name": "Varga Judit",
-      "role": "Community Manager",
-      "image": "https://placehold.co/400x400/10b981/ffffff?text=VJ",
-      "joined": "2023-05-20"
-    },
-    {
-      "id": 6,
-      "name": "Kiss Zoltán",
-      "role": "DevOps Engineer",
-      "image": "https://placehold.co/400x400/f59e0b/ffffff?text=KZ",
-      "joined": "2023-06-30"
-    }
-  ],
-  "events": [
-    {
-      "id": 1,
-      "name": "Éves Tech Summit 2024",
-      "date": "2024-03-15",
-      "location": "Budapest, Millenáris Park",
-      "description": "Az éves nagyrendezvényünk, ahol bemutatjuk a legújabb fejlesztéseinket és vendégelőadókat hívunk a tech világból. Idén a mesterséges intelligencia a fókusz."
-    },
-    {
-      "id": 2,
-      "name": "Tavaszi Hackathon",
-      "date": "2024-04-20",
-      "location": "Budapest, Bálna",
-      "description": "24 órás programozói verseny, ahol csapatok dolgoznak innovatív megoldásokon fenntarthatósági témában. Nyeremények és pizza biztosítva!"
-    },
-    {
-      "id": 3,
-      "name": "Workshop: Modern Frontend",
-      "date": "2024-05-10",
-      "location": "Online / Zoom",
-      "description": "Gyakorlati workshop a legújabb webes technológiákról. React Server Components, Next.js 14 és CSS újdonságok."
-    },
-    {
-      "id": 4,
-      "name": "Nyári Csapatépítő",
-      "date": "2024-06-25",
-      "location": "Velencei-tó",
-      "description": "Kötetlen szórakozás, sport és kikapcsolódás a csapat számára. SUP, strandröplabda és bográcsozás."
-    },
-    {
-      "id": 5,
-      "name": "AI Meetup",
-      "date": "2024-09-05",
-      "location": "Budapest, Create26",
-      "description": "Szakmai beszélgetés az LLM-ek jövőjéről és alkalmazási lehetőségeiről vállalati környezetben."
-    }
-  ]
+    "members": [
+        {
+            "id": 1,
+            "name": "Dózsa Imre Márk",
+            "role": "Praeses",
+            "image": "https://placehold.co/400x400/4f46e5/ffffff?text=DM"
+        },
+        {
+            "id": 2,
+            "name": "Lengyel János",
+            "role": "Major Domus",
+            "image": "https://placehold.co/400x400/0ea5e9/ffffff?text=LJ"
+        },
+        {
+            "id": 3,
+            "name": "Gyöngyösi Dóra Imola",
+            "role": "Sauf commissarium",
+            "image": "https://placehold.co/400x400/ec4899/ffffff?text=GyD"
+        },
+        {
+            "id": 4,
+            "name": "Marót Máté",
+            "role": "Krónikás",
+            "image": "https://placehold.co/400x400/8b5cf6/ffffff?text=MM"
+        },
+        {
+            "id": 5,
+            "name": "Bucskó Gábor",
+            "role": "tag",
+            "image": "https://placehold.co/400x400/10b981/ffffff?text=BG"
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "name": "Éves Tech Summit 2024",
+            "date": "2024-03-15",
+            "location": "Budapest, Millenáris Park",
+            "description": "Az éves nagyrendezvényünk, ahol bemutatjuk a legújabb fejlesztéseinket és vendégelőadókat hívunk a tech világból. Idén a mesterséges intelligencia a fókusz."
+        },
+        {
+            "id": 2,
+            "name": "Tavaszi Hackathon",
+            "date": "2024-04-20",
+            "location": "Budapest, Bálna",
+            "description": "24 órás programozói verseny, ahol csapatok dolgoznak innovatív megoldásokon fenntarthatósági témában. Nyeremények és pizza biztosítva!"
+        },
+        {
+            "id": 3,
+            "name": "Workshop: Modern Frontend",
+            "date": "2024-05-10",
+            "location": "Online / Zoom",
+            "description": "Gyakorlati workshop a legújabb webes technológiákról. React Server Components, Next.js 14 és CSS újdonságok."
+        },
+        {
+            "id": 4,
+            "name": "Nyári Csapatépítő",
+            "date": "2024-06-25",
+            "location": "Velencei-tó",
+            "description": "Kötetlen szórakozás, sport és kikapcsolódás a csapat számára. SUP, strandröplabda és bográcsozás."
+        },
+        {
+            "id": 5,
+            "name": "AI Meetup",
+            "date": "2024-09-05",
+            "location": "Budapest, Create26",
+            "description": "Szakmai beszélgetés az LLM-ek jövőjéről és alkalmazási lehetőségeiről vállalati környezetben."
+        }
+    ]
 }
