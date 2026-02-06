@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderEvents(events) {
         if (!events || events.length === 0) {
-            eventsBodyEl.innerHTML = '<tr><td colspan="4">Nincsenek események.</td></tr>';
+            eventsBodyEl.innerHTML = '<tr><td colspan="5">Nincsenek események.</td></tr>';
             return;
         }
 
@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <tr data-index="${index}">
                 <td><strong>${event.name}</strong></td>
                 <td>${formatDate(event.date)}</td>
+                <td>${event.time || '-'}</td>
                 <td>${event.location}</td>
                 <td style="text-align: right;"><button class="view-btn">Megtekintés</button></td>
             </tr>
@@ -120,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Dialog Handling
     function openEventDialog(event) {
         dialogTitle.textContent = event.name;
-        dialogDate.textContent = formatDate(event.date);
+        dialogDate.textContent = `${formatDate(event.date)}${event.time ? ' ' + event.time : ''}`;
         dialogLocation.textContent = event.location;
         dialogDesc.textContent = event.description;
         dialog.showModal();
