@@ -66,19 +66,19 @@
             "id": 1,
             "name": "Egy mindenkiért, mindenki egyért Nedvesest",
             "date": "2026-02-21",
-            "time": "19:00",
-            "location": "Miskolci Egyetem, E/3 oldalszárny",
-            "description": "Mi, a Társas Társaság Asztal Társaság úgy határozánk, hogy elérkezett az idő a Társaság és szimpatizánsai alkoholtűrő képességének próbatételére. E jeles alkalmat az Egy mindenkiért, mindenki egyért Nedvesest hivatott megkoronázni.",
-            "facebookLink": "https://www.facebook.com/events/757029017449841",
+            "time": "",
+            "location": "",
+            "description": "",
+            "facebookLink": "",
             "visibility": "private"
         },
         {
             "id": 2,
             "name": "TTAT Komolyest",
             "date": "2026-01-18",
-            "time": "18:00",
-            "location": "Miskolci Egyetem, E/3 20-as pince",
-            "description": "Társaság jövőét megbeszélő estje.",
+            "time": "",
+            "location": "",
+            "description": "",
             "facebookLink": "",
             "visibility": "private"
         }
