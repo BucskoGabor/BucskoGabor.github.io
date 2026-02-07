@@ -35,6 +35,30 @@
             "name": "Bucskó Gábor",
             "role": "tag",
             "image": "https://placehold.co/400x400/10b981/ffffff?text=BG"
+        },
+        {
+            "id": 6,
+            "name": "Tasi Szabolcs",
+            "role": "tag",
+            "image": "https://placehold.co/400x400/10b981/ffffff?text=TS"
+        },
+        {
+            "id": 7,
+            "name": "Laczik Péter",
+            "role": "tag",
+            "image": "https://placehold.co/400x400/10b981/ffffff?text=LP"
+        },
+        {
+            "id": 8,
+            "name": "Bodó Bendegúz",
+            "role": "tag",
+            "image": "https://placehold.co/400x400/10b981/ffffff?text=BB"
+        },
+        {
+            "id": 9,
+            "name": "Csákó Balázs",
+            "role": "tag",
+            "image": "https://placehold.co/400x400/10b981/ffffff?text=CsB"
         }
     ],
     "events": [
