@@ -1871,10 +1871,15 @@
     "question": "Mi a cerevis játék vége? (mit kell tenni, illetve rajzolni) (2 pont)",
     "answer": "A kiürített Cereviskorsókat mindenki a saját mezőjébe fejjel lefelé lerakja, majd az utolsó ásó hegyétől kezdve, balról jobbra haladva, egy zárt hurkot kell rajzolni.",
     "image": "images/quiz/quiz_image_187.png",
-    "bad_answers": [
+    "bad_answers_images": [
       "images/quiz/quiz_image_29.png",
       "images/quiz/quiz_image_131.png",
       "images/quiz/quiz_image_135.png"
+    ],
+    "bad_answers": [
+      "Mindenki összetöri a korsóját a földön.",
+      "A játékosok aláírják az asztalt és hazamennek.",
+      "Letörlik az asztalt vizes ronggyal."
     ]
   },
   {

@@ -278,7 +278,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // However, some questions might be "What is in this picture?".
         // Based on data: "Rajzolj..." questions have image as answer. "Mit jelent..." might have illustration.
         // Let's check if bad_answers look like images.
-        const optionsAreImages = q.bad_answers && q.bad_answers.some(ans => ans.includes('/') || ans.toLowerCase().endsWith('.png'));
+        // Let's check if bad_answers look like images.
+        // Updated heuristic: check for 'images/' prefix or file extension, distinct from text answers with slashes like "A / B".
+        const optionsAreImages = q.bad_answers && q.bad_answers.some(ans => ans.includes('images/') || ans.toLowerCase().endsWith('.png') || ans.toLowerCase().endsWith('.jpg'));
 
         if (q.image && !optionsAreImages) {
             questionImage.src = q.image;
@@ -498,11 +500,11 @@ document.addEventListener('DOMContentLoaded', () => {
             let userAnswerDisplay = item.userAnswer;
             let correctAnswerDisplay = item.correctAnswer;
 
-            // Handle Image paths in summary
-            if (userAnswerDisplay && (userAnswerDisplay.includes('/') || userAnswerDisplay.toLowerCase().endsWith('.png'))) {
+            // Simple check for image path in display text
+            if (userAnswerDisplay && (userAnswerDisplay.includes('images/') || userAnswerDisplay.toLowerCase().endsWith('.png'))) {
                 userAnswerDisplay = `<img src="${userAnswerDisplay}" style="height: 50px; vertical-align: middle;">`;
             }
-            if (correctAnswerDisplay && (correctAnswerDisplay.includes('/') || correctAnswerDisplay.toLowerCase().endsWith('.png'))) {
+            if (correctAnswerDisplay && (correctAnswerDisplay.includes('images/') || correctAnswerDisplay.toLowerCase().endsWith('.png'))) {
                 correctAnswerDisplay = `<img src="${correctAnswerDisplay}" style="height: 50px; vertical-align: middle;">`;
             }
 
