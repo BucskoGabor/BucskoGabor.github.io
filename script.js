@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dialogDate = document.getElementById('dialog-date');
     const dialogLocation = document.getElementById('dialog-location');
     const dialogDesc = document.getElementById('dialog-desc');
+    const dialogFbLink = document.getElementById('dialog-fb-link');
 
     // 1. Fetch Data
     fetch('data.json')
@@ -124,6 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
         dialogDate.textContent = `${formatDate(event.date)}${event.time ? ' ' + event.time : ''}`;
         dialogLocation.textContent = event.location;
         dialogDesc.textContent = event.description;
+
+        if (event.facebookLink) {
+            dialogFbLink.href = event.facebookLink;
+            dialogFbLink.style.display = 'inline-block';
+        } else {
+            dialogFbLink.style.display = 'none';
+        }
+
         dialog.showModal();
 
         // Close when clicking outside content (backdrop)

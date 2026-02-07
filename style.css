@@ -226,11 +226,8 @@ nav {
     height: auto;
     margin: 0 auto 2rem auto;
     display: block;
-    /* blend mode 'darken' works better for dark-on-white logos to hide white bg */
-    mix-blend-mode: multiply;
-    /* radial mask to fade hard edges if blending fails */
-    mask-image: radial-gradient(circle, black 60%, transparent 100%);
-    -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+    margin: 0 auto 2rem auto;
+    display: block;
 }
 
 .lead-text {
@@ -425,6 +422,22 @@ dialog::backdrop {
 
 .detail-item .icon {
     font-size: 1.2rem;
+}
+
+.fb-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #1877f2;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.fb-link:hover {
+    background-color: #166fe5;
 }
 
 .dialog-content hr {

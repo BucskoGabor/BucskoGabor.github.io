@@ -3,7 +3,7 @@
         "name": "Társas Társaság Asztal Társaság",
         "description": "Üdvözöljük a Társas Társaság Asztal Társaság oldalán. A társaságunk Selmecz diákhagyományait ápolja, és az ott játszott társasokra specializálódott. A társaságunkat 2025-ben alapítottuk, és azóta is töretlenül működik.",
         "vision": "Feléleszteni a manapság már szűkkörben játszott társasokat, és megismertetni azokat a fiatalabb generációkkal.",
-        "coatOfArms": "images/ttat.jpg"
+        "coatOfArms": "images/ttat.png"
     },
     "members": [
         {
@@ -33,31 +33,31 @@
         {
             "id": 5,
             "name": "Bucskó Gábor",
-            "role": "tag",
+            "role": "Tag",
             "image": "https://placehold.co/400x400/10b981/ffffff?text=BG"
         },
         {
             "id": 6,
             "name": "Tasi Szabolcs",
-            "role": "tag",
+            "role": "Tag",
             "image": "https://placehold.co/400x400/10b981/ffffff?text=TS"
         },
         {
             "id": 7,
             "name": "Laczik Péter",
-            "role": "tag",
+            "role": "Tag",
             "image": "https://placehold.co/400x400/10b981/ffffff?text=LP"
         },
         {
             "id": 8,
             "name": "Bodó Bendegúz",
-            "role": "tag",
+            "role": "Tag",
             "image": "https://placehold.co/400x400/10b981/ffffff?text=BB"
         },
         {
             "id": 9,
             "name": "Csákó Balázs",
-            "role": "tag",
+            "role": "Tag",
             "image": "https://placehold.co/400x400/10b981/ffffff?text=CsB"
         }
     ],
@@ -68,7 +68,8 @@
             "date": "2026-02-21",
             "time": "18:00",
             "location": "Miskolci Egyetem, E/3 oldalszárny",
-            "description": "Mi, a Társas Társaság Asztal Társaság úgy határozánk, hogy elérkezett az idő a Társaság és szimpatizánsai alkoholtűrő képességének próbatételére. E jeles alkalmat az Egy mindenkiért, mindenki egyért Nedvesest hivatott megkoronázni."
+            "description": "Mi, a Társas Társaság Asztal Társaság úgy határozánk, hogy elérkezett az idő a Társaság és szimpatizánsai alkoholtűrő képességének próbatételére. E jeles alkalmat az Egy mindenkiért, mindenki egyért Nedvesest hivatott megkoronázni.",
+            "facebookLink": "https://www.facebook.com/events/757029017449841"
         }
     ]
 }
