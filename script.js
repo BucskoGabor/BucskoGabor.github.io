@@ -358,56 +358,73 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderMultiPartOptions(q) {
         multiPartSelection = { text: null, image: null };
 
-        // 1. Text Options
-        const textContainer = document.createElement('div');
-        textContainer.innerHTML = '<h4>Válassza ki a helyes szöveget:</h4>';
-        textContainer.className = 'options-grid';
-        textContainer.style.marginTop = '1rem';
-        textContainer.style.marginBottom = '2rem';
+        // Main container for the split view
+        const splitContainer = document.createElement('div');
+        splitContainer.className = 'multipart-split-container'; // New class for CSS
+
+        // --- Left Side: Text ---
+        const leftSection = document.createElement('div');
+        leftSection.className = 'multipart-section';
+
+        const textHeader = document.createElement('h4');
+        textHeader.textContent = 'Válassza ki a helyes szöveget:';
+        textHeader.style.marginBottom = '1rem';
+        leftSection.appendChild(textHeader);
+
+        const textGrid = document.createElement('div');
+        textGrid.className = 'multipart-options-grid text-grid'; // New class
 
         let textOptions = [{ text: q.answer, isCorrect: true }];
         q.bad_answers.forEach(bad => textOptions.push({ text: bad, isCorrect: false }));
-        // Shuffle
         textOptions.sort(() => Math.random() - 0.5);
 
         textOptions.forEach(opt => {
             const btn = document.createElement('button');
-            btn.className = 'quiz-option-btn';
+            btn.className = 'quiz-option-btn text-option-btn';
             btn.textContent = opt.text;
             btn.onclick = (e) => handleMultiSelect('text', opt, e.target);
-            textContainer.appendChild(btn);
+            textGrid.appendChild(btn);
         });
+        leftSection.appendChild(textGrid);
+        splitContainer.appendChild(leftSection);
 
-        // 2. Image Options
-        const imgContainer = document.createElement('div');
-        imgContainer.innerHTML = '<h4>Válassza ki a helyes rajzot:</h4>';
-        imgContainer.className = 'options-grid';
+        // --- Right Side: Images ---
+        const rightSection = document.createElement('div');
+        rightSection.className = 'multipart-section';
+
+        const imgHeader = document.createElement('h4');
+        imgHeader.textContent = 'Válassza ki a helyes rajzot:';
+        imgHeader.style.marginBottom = '1rem';
+        rightSection.appendChild(imgHeader);
+
+        const imgGrid = document.createElement('div');
+        imgGrid.className = 'multipart-options-grid img-grid'; // New class
 
         let imgOptions = [{ text: q.image, isCorrect: true }];
         q.bad_answers_images.forEach(bad => imgOptions.push({ text: bad, isCorrect: false }));
-        // Shuffle
         imgOptions.sort(() => Math.random() - 0.5);
 
         imgOptions.forEach(opt => {
             const btn = document.createElement('button');
-            btn.className = 'quiz-option-btn';
+            btn.className = 'quiz-option-btn img-option-btn';
             const img = document.createElement('img');
             img.src = opt.text;
             img.className = 'quiz-option-img';
             btn.appendChild(img);
-            // Click on button (which contains img)
             btn.onclick = (e) => handleMultiSelect('image', opt, e.currentTarget);
-            imgContainer.appendChild(btn);
+            imgGrid.appendChild(btn);
         });
+        rightSection.appendChild(imgGrid);
+        splitContainer.appendChild(rightSection);
 
-        quizOptions.appendChild(textContainer);
-        quizOptions.appendChild(imgContainer);
+        quizOptions.appendChild(splitContainer);
 
         // Add Submit Button
         const submitBtn = document.createElement('button');
         submitBtn.className = 'nav-btn';
         submitBtn.textContent = 'Válaszok beküldése';
         submitBtn.style.marginTop = '2rem';
+        submitBtn.style.width = '100%';
         submitBtn.onclick = submitMultiAnswer;
         quizOptions.appendChild(submitBtn);
     }
@@ -503,12 +520,17 @@ document.addEventListener('DOMContentLoaded', () => {
             let correctAnswerDisplay = item.correctAnswer;
 
             // Simple check for image path in display text
-            if (userAnswerDisplay && (userAnswerDisplay.includes('images/') || userAnswerDisplay.toLowerCase().endsWith('.png'))) {
+            // ONLY if it looks like a pure image path
+            if (userAnswerDisplay && !userAnswerDisplay.startsWith('Szöveg:') && (userAnswerDisplay.trim().startsWith('images/') || userAnswerDisplay.toLowerCase().endsWith('.png'))) {
                 userAnswerDisplay = `<img src="${userAnswerDisplay}" style="height: 50px; vertical-align: middle;">`;
             }
-            if (correctAnswerDisplay && (correctAnswerDisplay.includes('images/') || correctAnswerDisplay.toLowerCase().endsWith('.png'))) {
+            if (correctAnswerDisplay && !correctAnswerDisplay.startsWith('Szöveg:') && (correctAnswerDisplay.trim().startsWith('images/') || correctAnswerDisplay.toLowerCase().endsWith('.png'))) {
                 correctAnswerDisplay = `<img src="${correctAnswerDisplay}" style="height: 50px; vertical-align: middle;">`;
             }
+
+            // Special handling for Multi-part display to make it pretty? 
+            // If starts with Szöveg, maybe formatting? For now, plain text is better than broken image.
+
 
             const pointsDisplay = item.earned > 0 ? `<span class="text-success">✔ (+${item.earned} pont)</span>` : '<span class="text-danger">✘ (0 pont)</span>';
             const itemClass = item.isCorrect ? 'correct' : (item.isPartial ? 'warning' : 'incorrect'); // You might want to add .warning style

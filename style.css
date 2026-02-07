@@ -1113,3 +1113,42 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* Multi-part Question Layout */
+.multipart-split-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+}
+
+@media(min-width: 900px) {
+    .multipart-split-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.multipart-options-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.text-grid {
+    grid-template-columns: 1fr;
+    /* Text options stacked */
+}
+
+.img-grid {
+    grid-template-columns: 1fr 1fr;
+    /* Image options in 2x2 grid */
+}
+
+/* Force equal height for text options to look cleaner */
+.text-option-btn {
+    height: 100%;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
