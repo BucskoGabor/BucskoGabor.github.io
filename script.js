@@ -278,11 +278,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // However, some questions might be "What is in this picture?".
         // Based on data: "Rajzolj..." questions have image as answer. "Mit jelent..." might have illustration.
         // Let's check if bad_answers look like images.
-        // Let's check if bad_answers look like images.
         // Updated heuristic: check for 'images/' prefix or file extension, distinct from text answers with slashes like "A / B".
         const optionsAreImages = q.bad_answers && q.bad_answers.some(ans => ans.includes('images/') || ans.toLowerCase().endsWith('.png') || ans.toLowerCase().endsWith('.jpg'));
 
-        if (q.image && !optionsAreImages) {
+        // Also check if it is a multi-part question (has bad_answers_images) - in this case q.image is likely the answer option, not an illustration.
+        const isMultiPart = q.bad_answers_images && q.bad_answers_images.length > 0;
+
+        if (q.image && !optionsAreImages && !isMultiPart) {
             questionImage.src = q.image;
             questionImage.classList.remove('hidden');
         } else {
