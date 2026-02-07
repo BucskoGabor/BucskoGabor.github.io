@@ -784,16 +784,19 @@ footer {
 
     nav {
         width: 100%;
-        overflow-x: auto;
-        padding-bottom: 5px;
-        /* For scrollbar */
+        flex-wrap: wrap;
+        /* Allow wrapping instead of scroll to show dropdown */
         justify-content: center;
+        overflow: visible;
+        /* Ensure dropdowns aren't clipped */
     }
 
     .nav-btn {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
         white-space: nowrap;
+        margin-bottom: 0.5rem;
+        /* Add spacing for wrapped lines */
     }
 
     .about-card {
