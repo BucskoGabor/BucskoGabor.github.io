@@ -81,6 +81,16 @@
             "description": "",
             "facebookLink": "",
             "visibility": "private"
+        },
+        {
+            "id": 3,
+            "name": "TTAT sütőgetés",
+            "date": "2026-03-06",
+            "time": "14:00",
+            "location": "Miskolci Egyetem, E/1 tűzrakóhely",
+            "description": "Társas Társaság Asztal Társaság sütőgetése. A sütőgetésen való részvételhez előzetes regisztráció szükséges.",
+            "facebookLink": "",
+            "visibility": "public"
         }
     ]
 }
