@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements
-    const navButtons = document.querySelectorAll('.nav-btn');
+    const navButtons = document.querySelectorAll('.nav-btn, .dropdown-item');
     const sections = document.querySelectorAll('.section');
 
     // About Elements
@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             // Remove active class from all buttons and sections
             navButtons.forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.dropdown-item').forEach(b => b.classList.remove('active'));
             sections.forEach(s => {
                 s.classList.remove('active');
                 s.classList.add('hidden'); // Helper class for display none
