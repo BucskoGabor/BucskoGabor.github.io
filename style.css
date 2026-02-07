@@ -226,7 +226,11 @@ nav {
     height: auto;
     margin: 0 auto 2rem auto;
     display: block;
+    /* blend mode 'darken' works better for dark-on-white logos to hide white bg */
     mix-blend-mode: multiply;
+    /* radial mask to fade hard edges if blending fails */
+    mask-image: radial-gradient(circle, black 60%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
 }
 
 .lead-text {
