@@ -344,6 +344,12 @@ nav {
     object-fit: contain;
 }
 
+.selected-option {
+    border: 2px solid var(--accent);
+    background: rgba(255, 255, 255, 0.3) !important;
+    transform: scale(1.02);
+}
+
 /* Results Summary Styles */
 .results-list {
     max-height: 60vh;

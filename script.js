@@ -291,8 +291,16 @@ document.addEventListener('DOMContentLoaded', () => {
         renderOptions(q, optionsAreImages);
     }
 
+    let multiPartSelection = { text: null, image: null };
+
     function renderOptions(q, optionsAreImages) {
         quizOptions.innerHTML = ''; // Clear previous
+
+        // Special Case: Question 187 (or any with bad_answers_images)
+        if (q.bad_answers_images && q.bad_answers_images.length > 0) {
+            renderMultiPartOptions(q);
+            return;
+        }
 
         let options = [];
         // Add Correct Answer
@@ -341,6 +349,109 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.onclick = () => handleAnswer(opt.isCorrect, opt.text);
             quizOptions.appendChild(btn);
         });
+    }
+
+    function renderMultiPartOptions(q) {
+        multiPartSelection = { text: null, image: null };
+
+        // 1. Text Options
+        const textContainer = document.createElement('div');
+        textContainer.innerHTML = '<h4>Válassza ki a helyes szöveget:</h4>';
+        textContainer.className = 'options-grid';
+        textContainer.style.marginTop = '1rem';
+        textContainer.style.marginBottom = '2rem';
+
+        let textOptions = [{ text: q.answer, isCorrect: true }];
+        q.bad_answers.forEach(bad => textOptions.push({ text: bad, isCorrect: false }));
+        // Shuffle
+        textOptions.sort(() => Math.random() - 0.5);
+
+        textOptions.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option-btn';
+            btn.textContent = opt.text;
+            btn.onclick = (e) => handleMultiSelect('text', opt, e.target);
+            textContainer.appendChild(btn);
+        });
+
+        // 2. Image Options
+        const imgContainer = document.createElement('div');
+        imgContainer.innerHTML = '<h4>Válassza ki a helyes rajzot:</h4>';
+        imgContainer.className = 'options-grid';
+
+        let imgOptions = [{ text: q.image, isCorrect: true }];
+        q.bad_answers_images.forEach(bad => imgOptions.push({ text: bad, isCorrect: false }));
+        // Shuffle
+        imgOptions.sort(() => Math.random() - 0.5);
+
+        imgOptions.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option-btn';
+            const img = document.createElement('img');
+            img.src = opt.text;
+            img.className = 'quiz-option-img';
+            btn.appendChild(img);
+            // Click on button (which contains img)
+            btn.onclick = (e) => handleMultiSelect('image', opt, e.currentTarget);
+            imgContainer.appendChild(btn);
+        });
+
+        quizOptions.appendChild(textContainer);
+        quizOptions.appendChild(imgContainer);
+
+        // Add Submit Button
+        const submitBtn = document.createElement('button');
+        submitBtn.className = 'nav-btn';
+        submitBtn.textContent = 'Válaszok beküldése';
+        submitBtn.style.marginTop = '2rem';
+        submitBtn.onclick = submitMultiAnswer;
+        quizOptions.appendChild(submitBtn);
+    }
+
+    function handleMultiSelect(type, option, btnElement) {
+        // Clear previous selection style in this group
+        const group = btnElement.parentElement;
+        Array.from(group.children).forEach(child => child.classList.remove('selected-option'));
+
+        // Mark checked
+        btnElement.classList.add('selected-option');
+        multiPartSelection[type] = option;
+    }
+
+    function submitMultiAnswer() {
+        if (!multiPartSelection.text || !multiPartSelection.image) {
+            alert('Kérlek válassz egy szöveges és egy képes választ is!');
+            return;
+        }
+
+        let pointsEarned = 0;
+        if (multiPartSelection.text.isCorrect) pointsEarned++;
+        if (multiPartSelection.image.isCorrect) pointsEarned++;
+
+        score += pointsEarned;
+
+        const q = currentQuizSet[currentQuestionIndex];
+
+        // Log Result with combined info
+        userAnswers.push({
+            question: q.question,
+            userAnswer: `Szöveg: ${multiPartSelection.text.text.substring(0, 30)}... | Kép: kiválasztva`,
+            correctAnswer: `Szöveg: ${q.answer.substring(0, 30)}... | Kép: ${q.image}`,
+            isCorrect: pointsEarned === 2, // Only fully correct if both (for summary color) but points still tracked
+            points: 2, // Max points for this Q
+            earned: pointsEarned,
+            isPartial: pointsEarned > 0 && pointsEarned < 2
+        });
+
+        scoreEl.textContent = `Pontszám: ${score} / ${maxScore}`;
+
+        // Next
+        currentQuestionIndex++;
+        if (currentQuestionIndex < currentQuizSet.length) {
+            loadQuestion();
+        } else {
+            showResults();
+        }
     }
 
     function handleAnswer(isCorrect, userAnswerText) {
@@ -395,11 +506,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 correctAnswerDisplay = `<img src="${correctAnswerDisplay}" style="height: 50px; vertical-align: middle;">`;
             }
 
+            const pointsDisplay = item.earned > 0 ? `<span class="text-success">✔ (+${item.earned} pont)</span>` : '<span class="text-danger">✘ (0 pont)</span>';
+            const itemClass = item.isCorrect ? 'correct' : (item.isPartial ? 'warning' : 'incorrect'); // You might want to add .warning style
+
+            div.className = `result-item ${itemClass}`;
+
             div.innerHTML = `
                 <div class="result-question">${index + 1}. ${item.question}</div>
                 <div class="result-detail">
-                    Válaszod: <strong>${userAnswerDisplay}</strong> 
-                    ${item.isCorrect ? '<span class="text-success">✔ (+' + item.points + ' pont)</span>' : '<span class="text-danger">✘ (0 pont)</span>'}
+                    Válaszod: <strong>${userAnswerDisplay}</strong> ${pointsDisplay}
                 </div>
                 ${!item.isCorrect ? `<div class="result-detail">Helyes válasz: <strong class="text-success">${correctAnswerDisplay}</strong></div>` : ''}
             `;
