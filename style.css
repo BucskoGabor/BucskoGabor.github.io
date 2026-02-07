@@ -203,6 +203,14 @@ nav {
     color: var(--text-secondary);
 }
 
+.subsection-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--accent-glow);
+    padding-left: 0.5rem;
+    border-left: 4px solid var(--accent-color);
+}
+
 /* About Section */
 .about-card {
     padding: 4rem;

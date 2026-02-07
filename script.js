@@ -12,8 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Members Grid
     const membersGridEl = document.getElementById('members-grid');
 
-    // Events Table
-    const eventsBodyEl = document.getElementById('events-body');
+    // Events Table Elements
+    const futureEventsBodyEl = document.getElementById('future-events-body');
+    const pastEventsBodyEl = document.getElementById('past-events-body');
 
     // Dialog Elements
     const dialog = document.getElementById('event-dialog');
@@ -95,26 +96,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderEvents(events) {
         if (!events || events.length === 0) {
-            eventsBodyEl.innerHTML = '<tr><td colspan="5">Nincsenek események.</td></tr>';
+            futureEventsBodyEl.innerHTML = '<tr><td colspan="5">Nincsenek események.</td></tr>';
+            pastEventsBodyEl.innerHTML = '<tr><td colspan="5">Nincsenek események.</td></tr>';
             return;
         }
 
-        eventsBodyEl.innerHTML = events.map((event, index) => `
-            <tr data-index="${index}">
-                <td><strong>${event.name}</strong></td>
-                <td>${formatDate(event.date)}</td>
-                <td>${event.time || '-'}</td>
-                <td>${event.location}</td>
-                <td style="text-align: right;"><button class="view-btn">Megtekintés</button></td>
-            </tr>
-        `).join('');
+        const now = new Date();
+        now.setHours(0, 0, 0, 0);
 
-        // Add Click Listeners to rows
-        document.querySelectorAll('.events-table tbody tr').forEach(row => {
+        const futureEvents = events.filter(e => new Date(e.date) >= now).sort((a, b) => new Date(a.date) - new Date(b.date));
+        const pastEvents = events.filter(e => new Date(e.date) < now).sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        renderEventList(futureEvents, futureEventsBodyEl, "Nincsenek jövőbeli események.");
+        renderEventList(pastEvents, pastEventsBodyEl, "Nincsenek múltbeli események.");
+    }
+
+    function renderEventList(eventsList, container, emptyMsg) {
+        if (eventsList.length === 0) {
+            container.innerHTML = `<tr><td colspan="5" style="text-align:center; padding: 2rem; color: var(--text-secondary);">${emptyMsg}</td></tr>`;
+            return;
+        }
+
+        container.innerHTML = eventsList.map((event) => {
+            // Private Event Logic
+            if (event.visibility === 'private') {
+                return `
+                    <tr class="private-event" style="opacity: 0.6; cursor: default;">
+                        <td colspan="5"><strong>${event.name}</strong> <span style="font-size: 0.8em; margin-left: 10px; opacity: 0.7;">(Privát)</span></td>
+                    </tr>
+                `;
+            }
+
+            // Public Event Logic
+            return `
+                <tr data-id="${event.id}" style="cursor: pointer;">
+                    <td><strong>${event.name}</strong></td>
+                    <td>${formatDate(event.date)}</td>
+                    <td>${event.time || '-'}</td>
+                    <td>${event.location}</td>
+                    <td style="text-align: right;"><button class="view-btn">Megtekintés</button></td>
+                </tr>
+            `;
+        }).join('');
+
+        // Add Click Listeners only to public events
+        container.querySelectorAll('tr[data-id]').forEach(row => {
             row.addEventListener('click', () => {
-                const eventIndex = row.getAttribute('data-index');
-                const eventData = events[eventIndex];
-                openEventDialog(eventData);
+                const eventId = row.getAttribute('data-id');
+                const eventData = eventsList.find(e => e.id == eventId);
+                if (eventData) openEventDialog(eventData);
             });
         });
     }
@@ -128,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (event.facebookLink) {
             dialogFbLink.href = event.facebookLink;
-            dialogFbLink.style.display = 'inline-block';
+            dialogFbLink.style.display = 'table'; // using table to center with margin: auto
         } else {
             dialogFbLink.style.display = 'none';
         }
