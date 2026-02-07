@@ -46,6 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Tab Navigation
     navButtons.forEach(btn => {
         btn.addEventListener('click', () => {
+            const tabId = btn.getAttribute('data-tab');
+            if (!tabId) return; // Ignore buttons that don't switch tabs (e.g. dropdown toggle)
+
             // Remove active class from all buttons and sections
             navButtons.forEach(b => b.classList.remove('active'));
             document.querySelectorAll('.dropdown-item').forEach(b => b.classList.remove('active'));
@@ -58,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('active');
 
             // Show target section
-            const tabId = btn.getAttribute('data-tab');
             const targetSection = document.getElementById(tabId);
             targetSection.classList.remove('hidden');
             targetSection.classList.add('active');
