@@ -279,16 +279,27 @@ nav {
 }
 
 /* Quiz Styles */
+/* Quiz Styles */
 #start-quiz-btn {
     background-color: #000000;
     color: #ffffff;
-    border: 1px solid #000000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 #start-quiz-btn:hover {
-    background-color: #333333;
-    color: #ffffff;
-    border-color: #333333;
+    background-color: #222;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .quiz-header {
