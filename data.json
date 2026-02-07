@@ -3,7 +3,12 @@
         "name": "Társas Társaság Asztal Társaság",
         "description": "Üdvözöljük a Társas Társaság Asztal Társaság oldalán. A társaságunk Selmecz diákhagyományait ápolja, és az ott játszott társasokra specializálódott. A társaságunkat 2025-ben alapítottuk, és azóta is töretlenül működik.",
         "vision": "Feléleszteni a manapság már szűkkörben játszott társasokat, és megismertetni azokat a fiatalabb generációkkal.",
-        "coatOfArms": "images/ttat.png"
+        "coatOfArms": "images/ttat.png",
+        "social": {
+            "facebook": "https://www.facebook.com/profile.php?id=61584356443888",
+            "instagram": "https://www.instagram.com/tarsastarsasagasztaltarsasag/",
+            "email": "[EMAIL_ADDRESS]"
+        }
     },
     "members": [
         {
