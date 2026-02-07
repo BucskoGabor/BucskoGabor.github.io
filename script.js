@@ -462,8 +462,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Log Result with combined info
         userAnswers.push({
             question: q.question,
-            userAnswer: `Szöveg: ${multiPartSelection.text.text.substring(0, 30)}... | Kép: kiválasztva`,
-            correctAnswer: `Szöveg: ${q.answer.substring(0, 30)}... | Kép: ${q.image}`,
+            userAnswer: `Szöveg: ${multiPartSelection.text.text} | Kép: ${multiPartSelection.image.text}`,
+            correctAnswer: `Szöveg: ${q.answer} | Kép: ${q.image}`,
             isCorrect: pointsEarned === 2, // Only fully correct if both (for summary color) but points still tracked
             points: 2, // Max points for this Q
             earned: pointsEarned,
