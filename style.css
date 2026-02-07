@@ -279,6 +279,18 @@ nav {
 }
 
 /* Quiz Styles */
+#start-quiz-btn {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+}
+
+#start-quiz-btn:hover {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #333333;
+}
+
 .quiz-header {
     display: flex;
     justify-content: space-between;
