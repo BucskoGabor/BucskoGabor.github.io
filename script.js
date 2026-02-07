@@ -320,17 +320,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (eventData) openEventDialog(eventData);
             });
         });
-    });
     }
 
-function renderGeneralGallery(galleryImages) {
-    const galleryGrid = document.getElementById('general-gallery-grid');
-    if (!galleryImages || galleryImages.length === 0) {
-        galleryGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">Jelenleg nincsenek feltöltött képek.</p>';
-        return;
-    }
+    function renderGeneralGallery(galleryImages) {
+        const galleryGrid = document.getElementById('general-gallery-grid');
+        if (!galleryImages || galleryImages.length === 0) {
+            galleryGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">Jelenleg nincsenek feltöltött képek.</p>';
+            return;
+        }
 
-    galleryGrid.innerHTML = galleryImages.map((imgSrc, index) => `
+        galleryGrid.innerHTML = galleryImages.map((imgSrc, index) => `
             <div class="gallery-entry" data-index="${index}" style="cursor: pointer; position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3;">
                 <img src="${imgSrc}" alt="Galéria kép ${index + 1}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
                 <div class="gallery-overlay" style="opacity: 0; transition: opacity 0.3s ease;">
@@ -339,158 +338,159 @@ function renderGeneralGallery(galleryImages) {
             </div>
         `).join('');
 
-    // Add Click Listeners for Lightbox
-    galleryGrid.querySelectorAll('.gallery-entry').forEach(entry => {
-        entry.addEventListener('click', () => {
-            const index = parseInt(entry.getAttribute('data-index'));
-            openLightbox(index, galleryImages);
-        });
+        // Add Click Listeners for Lightbox
+        galleryGrid.querySelectorAll('.gallery-entry').forEach(entry => {
+            entry.addEventListener('click', () => {
+                const index = parseInt(entry.getAttribute('data-index'));
+                openLightbox(index, galleryImages);
+            });
 
-        // Add hover effect via JS/Inline styles for simplicity or rely on CSS
-        entry.addEventListener('mouseenter', () => {
-            entry.querySelector('.gallery-overlay').style.opacity = '1';
-            entry.querySelector('img').style.transform = 'scale(1.05)';
+            // Add hover effect via JS/Inline styles for simplicity or rely on CSS
+            entry.addEventListener('mouseenter', () => {
+                entry.querySelector('.gallery-overlay').style.opacity = '1';
+                entry.querySelector('img').style.transform = 'scale(1.05)';
+            });
+            entry.addEventListener('mouseleave', () => {
+                entry.querySelector('.gallery-overlay').style.opacity = '0';
+                entry.querySelector('img').style.transform = 'scale(1)';
+            });
         });
-        entry.addEventListener('mouseleave', () => {
-            entry.querySelector('.gallery-overlay').style.opacity = '0';
-            entry.querySelector('img').style.transform = 'scale(1)';
-        });
-    });
-}
-
-// 4. Dialog Handling
-function openEventDialog(event) {
-    dialogTitle.textContent = event.name;
-    dialogDate.textContent = `${formatDate(event.date)}${event.time ? ' ' + event.time : ''}`;
-    dialogLocation.textContent = event.location;
-    dialogDesc.textContent = event.description;
-
-    if (event.facebookLink) {
-        dialogFbLink.href = event.facebookLink;
-        dialogFbLink.style.display = 'table'; // using table to center with margin: auto
-    } else {
-        dialogFbLink.style.display = 'none';
     }
 
-    // Gallery Handling - Blurred Entry
-    const galleryContainer = document.getElementById('dialog-gallery');
-    galleryContainer.innerHTML = ''; // Clear previous content
+    // 4. Dialog Handling
+    function openEventDialog(event) {
+        dialogTitle.textContent = event.name;
+        dialogDate.textContent = `${formatDate(event.date)}${event.time ? ' ' + event.time : ''}`;
+        dialogLocation.textContent = event.location;
+        dialogDesc.textContent = event.description;
 
-    // Ensure container has correct class for singular entry
-    galleryContainer.className = 'gallery-container';
+        if (event.facebookLink) {
+            dialogFbLink.href = event.facebookLink;
+            dialogFbLink.style.display = 'table'; // using table to center with margin: auto
+        } else {
+            dialogFbLink.style.display = 'none';
+        }
 
-    if (event.gallery && event.gallery.length > 0) {
-        galleryContainer.style.display = 'block';
+        // Gallery Handling - Blurred Entry
+        const galleryContainer = document.getElementById('dialog-gallery');
+        galleryContainer.innerHTML = ''; // Clear previous content
 
-        // Create the blurred entry point
-        const entryDiv = document.createElement('div');
-        entryDiv.className = 'gallery-entry';
+        // Ensure container has correct class for singular entry
+        galleryContainer.className = 'gallery-container';
 
-        const coverImg = document.createElement('img');
-        coverImg.src = event.gallery[0];
-        coverImg.alt = 'Galéria borítókép';
+        if (event.gallery && event.gallery.length > 0) {
+            galleryContainer.style.display = 'block';
 
-        const overlay = document.createElement('div');
-        overlay.className = 'gallery-overlay';
-        overlay.textContent = 'Galéria';
+            // Create the blurred entry point
+            const entryDiv = document.createElement('div');
+            entryDiv.className = 'gallery-entry';
 
-        entryDiv.appendChild(coverImg);
-        entryDiv.appendChild(overlay);
+            const coverImg = document.createElement('img');
+            coverImg.src = event.gallery[0];
+            coverImg.alt = 'Galéria borítókép';
 
-        // On click, open the lightbox with all images
-        entryDiv.addEventListener('click', () => {
-            openLightbox(0, event.gallery);
-        });
+            const overlay = document.createElement('div');
+            overlay.className = 'gallery-overlay';
+            overlay.textContent = 'Galéria';
 
-        galleryContainer.appendChild(entryDiv);
+            entryDiv.appendChild(coverImg);
+            entryDiv.appendChild(overlay);
 
-    } else {
-        galleryContainer.style.display = 'none';
+            // On click, open the lightbox with all images
+            entryDiv.addEventListener('click', () => {
+                openLightbox(0, event.gallery);
+            });
+
+            galleryContainer.appendChild(entryDiv);
+
+        } else {
+            galleryContainer.style.display = 'none';
+        }
+
+        dialog.showModal();
+
+        // Close when clicking outside content (backdrop)
+        dialog.addEventListener('click', backdropClickHandler);
     }
 
-    dialog.showModal();
+    function backdropClickHandler(e) {
+        const rect = dialog.getBoundingClientRect();
+        const isInDialog = (rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
+            rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
 
-    // Close when clicking outside content (backdrop)
-    dialog.addEventListener('click', backdropClickHandler);
-}
+        if (!isInDialog) {
+            dialog.close();
+            dialog.removeEventListener('click', backdropClickHandler);
+        }
+    }
 
-function backdropClickHandler(e) {
-    const rect = dialog.getBoundingClientRect();
-    const isInDialog = (rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
-        rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
-
-    if (!isInDialog) {
+    closeDialogBtn.addEventListener('click', () => {
         dialog.close();
         dialog.removeEventListener('click', backdropClickHandler);
+    });
+
+    // --- Lightbox Logic ---
+    const lightboxDialog = document.getElementById('lightbox-dialog');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeLightboxBtn = document.getElementById('close-lightbox');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    let currentLightboxImages = [];
+    let currentLightboxIndex = 0;
+
+    function openLightbox(index, images) {
+        currentLightboxImages = images;
+        currentLightboxIndex = index;
+        updateLightboxImage();
+        lightboxDialog.showModal();
     }
-}
 
-closeDialogBtn.addEventListener('click', () => {
-    dialog.close();
-    dialog.removeEventListener('click', backdropClickHandler);
-});
-
-// --- Lightbox Logic ---
-const lightboxDialog = document.getElementById('lightbox-dialog');
-const lightboxImg = document.getElementById('lightbox-img');
-const closeLightboxBtn = document.getElementById('close-lightbox');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-
-let currentLightboxImages = [];
-let currentLightboxIndex = 0;
-
-function openLightbox(index, images) {
-    currentLightboxImages = images;
-    currentLightboxIndex = index;
-    updateLightboxImage();
-    lightboxDialog.showModal();
-}
-
-function updateLightboxImage() {
-    if (currentLightboxImages.length > 0) {
-        lightboxImg.src = currentLightboxImages[currentLightboxIndex];
+    function updateLightboxImage() {
+        if (currentLightboxImages.length > 0) {
+            lightboxImg.src = currentLightboxImages[currentLightboxIndex];
+        }
     }
-}
 
-function showNextImage(e) {
-    if (e) e.stopPropagation();
-    currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxImages.length;
-    updateLightboxImage();
-}
+    function showNextImage(e) {
+        if (e) e.stopPropagation();
+        currentLightboxIndex = (currentLightboxIndex + 1) % currentLightboxImages.length;
+        updateLightboxImage();
+    }
 
-function showPrevImage(e) {
-    if (e) e.stopPropagation();
-    currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length;
-    updateLightboxImage();
-}
+    function showPrevImage(e) {
+        if (e) e.stopPropagation();
+        currentLightboxIndex = (currentLightboxIndex - 1 + currentLightboxImages.length) % currentLightboxImages.length;
+        updateLightboxImage();
+    }
 
-// Event Listeners for Lightbox
-nextBtn.addEventListener('click', showNextImage);
-prevBtn.addEventListener('click', showPrevImage);
+    // Event Listeners for Lightbox
+    nextBtn.addEventListener('click', showNextImage);
+    prevBtn.addEventListener('click', showPrevImage);
 
-closeLightboxBtn.addEventListener('click', () => {
-    lightboxDialog.close();
-});
-
-// Close lightbox on backdrop click
-lightboxDialog.addEventListener('click', (e) => {
-    if (e.target === lightboxDialog) {
+    closeLightboxBtn.addEventListener('click', () => {
         lightboxDialog.close();
+    });
+
+    // Close lightbox on backdrop click
+    lightboxDialog.addEventListener('click', (e) => {
+        if (e.target === lightboxDialog) {
+            lightboxDialog.close();
+        }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (lightboxDialog.open) {
+            if (e.key === 'ArrowRight') showNextImage();
+            if (e.key === 'ArrowLeft') showPrevImage();
+            if (e.key === 'Escape') lightboxDialog.close();
+        }
+    });
+
+    // Utility: Simple Date Formatter
+    function formatDate(dateString) {
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString('hu-HU', options);
     }
 });
-
-// Keyboard navigation
-document.addEventListener('keydown', (e) => {
-    if (lightboxDialog.open) {
-        if (e.key === 'ArrowRight') showNextImage();
-        if (e.key === 'ArrowLeft') showPrevImage();
-        if (e.key === 'Escape') lightboxDialog.close();
-    }
-});
-
-// Utility: Simple Date Formatter
-function formatDate(dateString) {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString('hu-HU', options);
-}
