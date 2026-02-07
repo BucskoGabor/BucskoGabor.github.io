@@ -206,14 +206,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const restartQuizBtn = document.getElementById('restart-quiz-btn');
 
     if (startQuizBtn) {
-        startQuizBtn.addEventListener('click', startQuiz);
+        startQuizBtn.addEventListener('click', () => {
+            console.log('Start Quiz clicked');
+            startQuiz();
+        });
     }
 
     if (restartQuizBtn) {
-        restartQuizBtn.addEventListener('click', startQuiz);
+        restartQuizBtn.addEventListener('click', () => {
+            console.log('Restart Quiz clicked');
+            startQuiz();
+        });
+    } else {
+        console.error('Restart button not found!');
     }
 
     async function startQuiz() {
+        console.log('Starting quiz...');
         try {
             const response = await fetch('documents/cerevis-kviz/quiz_data.json');
             const allQuestions = await response.json();
