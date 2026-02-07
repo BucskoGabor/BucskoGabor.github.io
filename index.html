@@ -78,6 +78,40 @@
                 </iframe>
             </div>
 
+            <div class="quiz-controls glass-card" style="text-align: center; margin-top: 2rem;">
+                <button id="start-quiz-btn" class="nav-btn">Tudásteszt Indítása</button>
+            </div>
+
+            <div id="quiz-container" class="glass-card hidden" style="margin-top: 2rem; padding: 2rem;">
+                <div class="quiz-header">
+                    <span id="quiz-progress">Kérdés: 0/0</span>
+                    <span id="quiz-score">Pontszám: 0</span>
+                </div>
+
+                <div class="question-card">
+                    <h3 id="question-text">Kérdés helye...</h3>
+                    <img id="question-image" src="" alt="Question Image" class="hidden"
+                        style="max-width: 100%; border-radius: 8px; margin-top: 1rem;">
+                </div>
+
+                <div id="answer-section" class="hidden"
+                    style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border);">
+                    <h4>Helyes válasz:</h4>
+                    <p id="answer-text" style="font-weight: bold; white-space: pre-wrap;">Válasz helye...</p>
+                    <img id="answer-image" src="" alt="Answer Image" class="hidden"
+                        style="max-width: 100%; border-radius: 8px; margin-top: 1rem;">
+
+                    <div class="rating-buttons"
+                        style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
+                        <button id="btn-correct" class="btn-success">Tudtam (+1)</button>
+                        <button id="btn-incorrect" class="btn-danger">Nem tudtam (0)</button>
+                    </div>
+                </div>
+
+                <button id="reveal-btn" class="nav-btn" style="margin-top: 1.5rem;">Válasz mutatása</button>
+            </div>
+
+
         </section>
 
         <!-- Events Section -->

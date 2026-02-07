@@ -1,0 +1,1208 @@
+[
+  {
+    "id": 1,
+    "question": "Mit jelent a Cerevis? (1 pont)",
+    "answer": "Szűretlen búzasör",
+    "image": null
+  },
+  {
+    "id": 2,
+    "question": "Mire utal a Cerevis játék neve? (1 pont)",
+    "answer": "Arra, hogy ez egy sörös-játék / sörös-kártyajáték",
+    "image": null
+  },
+  {
+    "id": 3,
+    "question": "Milyen kártyával és menyi lappal játszák a Cerevist? (1 pont)",
+    "answer": "Magyarkártyával és 32 lappal",
+    "image": null
+  },
+  {
+    "id": 4,
+    "question": "Mi a játék célja? (1 pont)",
+    "answer": "Felülütésekkel minél több ütést elorozni az ellenfél párosa elől.",
+    "image": null
+  },
+  {
+    "id": 5,
+    "question": "Milyen fajta kanalak tudják egymást felülütni? (1 pont)",
+    "answer": "Csak az azonos kanalak ütik felül egymást / tudják egymást felülütni",
+    "image": null
+  },
+  {
+    "id": 6,
+    "question": "Igaz vagy Hamis (Válaszát indokolja), A játék közben a kanalak színeit is figyelembe kell venni. (1 pont, felezhető)",
+    "answer": "Hamis, játék közben csak a jelentésükre tehát a számokra és figurákra kell figyelni",
+    "image": null
+  },
+  {
+    "id": 7,
+    "question": "Mennyien játszák a játékot? (1 pont)",
+    "answer": "4 fő (Jó szível 8fő)",
+    "image": null
+  },
+  {
+    "id": 8,
+    "question": "Mennyien vesznek részt a játékba? (1 pont)",
+    "answer": "8 fő, kivéve, ha a játék tanulása érdekében több kibic kíván segíteni és megfigyelni a játékot.",
+    "image": null
+  },
+  {
+    "id": 9,
+    "question": "Sorolja fel a kanalak megnevezéseit (aminek több van ott az összes kell) (8 pont)",
+    "answer": "király: lovas, csikó\nfelső: felsőház, felsőhordó, filkó\nalsó: alsóház, alsóhordó, baka\nász: disznó, koca\ntízes: decuma\nkilences: nona, búsuló\nnyolcas: octava\nhetes: septima, legkisebb",
+    "image": null
+  },
+  {
+    "id": 10,
+    "question": "Sorolja fel a leszámolásnál pontot érő kanalakat és azok értéküket (0 nem kell) (5 pont)",
+    "answer": "lovas/csikó = 4\nfelsőház/felsőhordó/filkó = 3\nalsóház/alsóhordó/baka = 2\ndisznó/koca = 11\ndecuma = 10",
+    "image": null
+  },
+  {
+    "id": 11,
+    "question": "Sorolja fel az összes kanalat és azok leszámolásánál mondott szám értéküket (Itt a 0-is kell), (8 pont)",
+    "answer": "lovas/csikó = 4\nfelsőház/felsőhordó/filkó = 3\nalsóház/alsóhordó/baka = 2\ndisznó/koca = 11\ndecuma = 10\nnona/búsuló = 0\noctava = 0\nseptima/legkisebb = 0",
+    "image": null
+  },
+  {
+    "id": 12,
+    "question": "Mi a Dred? (1 pont)",
+    "answer": "kréta",
+    "image": null
+  },
+  {
+    "id": 13,
+    "question": "Mi a kréta megnevezés-e? (1 pont)",
+    "answer": "Dred",
+    "image": null
+  },
+  {
+    "id": 14,
+    "question": "Mi a 3-mas szám megnevezés-e? (1 pont)",
+    "answer": "kis szent szám",
+    "image": null
+  },
+  {
+    "id": 15,
+    "question": "Mi az a kis szent szám? (1 pont)",
+    "answer": "A 3-mas szám",
+    "image": null
+  },
+  {
+    "id": 16,
+    "question": "Mi a 7-es szám megnevezése? (1 pont)",
+    "answer": "nagy szent szám",
+    "image": null
+  },
+  {
+    "id": 17,
+    "question": "Mi az a nagy szent szám? (1 pont)",
+    "answer": "A 7-es szám",
+    "image": null
+  },
+  {
+    "id": 18,
+    "question": "Mit jelent a kanalazás? (1 pont)",
+    "answer": "Kártyaosztást",
+    "image": null
+  },
+  {
+    "id": 19,
+    "question": "Hogy nevezik a kártyaosztást? (1 pont)",
+    "answer": "kanalazás",
+    "image": null
+  },
+  {
+    "id": 20,
+    "question": "Mit jelent a kikanalazás? (1 pont)",
+    "answer": "Kártya kijátszása",
+    "image": null
+  },
+  {
+    "id": 21,
+    "question": "Hogy nevezzük a kártya kijátszást? (1 pont)",
+    "answer": "kikanalazás",
+    "image": null
+  },
+  {
+    "id": 22,
+    "question": "Mit jelent az átkanalazás? (1 pont)",
+    "answer": "Kártya átadása",
+    "image": null
+  },
+  {
+    "id": 23,
+    "question": "Hogy nevezzük a kártya átadást? (1 pont)",
+    "answer": "átkanalazás",
+    "image": null
+  },
+  {
+    "id": 24,
+    "question": "Hogy nevezzük a nézést a játéksorán? (1 pont)",
+    "answer": "bámulni",
+    "image": null
+  },
+  {
+    "id": 25,
+    "question": "Mit jelent a bámulni kifejezés a játékba? (1 pont)",
+    "answer": "nézni",
+    "image": null
+  },
+  {
+    "id": 26,
+    "question": "Hogy nevezzük a rajzolást a játékmenet során? (1 pont)",
+    "answer": "keni, zsírozni",
+    "image": null
+  },
+  {
+    "id": 27,
+    "question": "Mit jelent a keni, zsírozni? (1 pont)",
+    "answer": "rajzolni",
+    "image": null
+  },
+  {
+    "id": 28,
+    "question": "Hogy mondod: (1 pont / db)",
+    "answer": "Kiosztom a lapokat / Kanalazom a kanalakat\nÁtadom a lapokat / átkanalazom a kanalakat\nmegnézem milyen lapjaim vannak / megbámulóm kanalaimat\nKérem a krétát / Kérem a dredet\nKijátszom az ász lapomat / Kikanalazom a koca kanalat\n...stb...",
+    "image": null
+  },
+  {
+    "id": 29,
+    "question": "Rajzolja meg a kezdő cereviszfigurát (1 pont)",
+    "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_29.png"
+  },
+  {
+    "id": 30,
+    "question": "Mikor kell sorsot húzni a játék folyamán? (1 pont)",
+    "answer": "A játék megkezdése előtt, ha a játékosok nem tudják eldönteni ki kivel legyen vagy hogy ki kezdje a játékot",
+    "image": null
+  },
+  {
+    "id": 31,
+    "question": "Milyen mondattal kezdődik el a játék a legelső kőr megkezdésénél? (1 pont)",
+    "answer": "A Cerevis elkezdődik, absint profanii",
+    "image": null
+  },
+  {
+    "id": 32,
+    "question": "Mi történik, ha elhangzik az „A Cerevis elkezdődik, absint profanii” mondat? (1 pont)",
+    "answer": "Elkezdődött a játék és minden játékos anyagot tölt korsójába",
+    "image": null
+  },
+  {
+    "id": 33,
+    "question": "Menyi kanalat kanalaz az osztó, milyen sorendbe? (1 pont)",
+    "answer": "16 kanalat, nincs külön sorrend erre a folyamatra",
+    "image": null
+  },
+  {
+    "id": 34,
+    "question": "A megmaradt pakli alján milyen kanalak nem lehetnek? (1 pont)",
+    "answer": "decumának és kocának/disznónak nem szabad lennie",
+    "image": null
+  },
+  {
+    "id": 35,
+    "question": "Mi történik, ha a megmaradt pakli legalsó lapja decuma vagy koca/disznó? (1 pont)",
+    "answer": "A pakli kiosztatlan részét újra kell keverni vagy új leosztást kell adni",
+    "image": null
+  },
+  {
+    "id": 36,
+    "question": "Milyen korsóval lehet csak a játékot játszani? (1 pont)",
+    "answer": "Csak felavatott cereviskorsóval",
+    "image": null
+  },
+  {
+    "id": 37,
+    "question": "Hova kerül a megmaradt pakli? (1 pont)",
+    "answer": "A Cerevisfigura ötágú csillagára",
+    "image": null
+  },
+  {
+    "id": 38,
+    "question": "Merre adod tovább a DREDET? (1 pont)",
+    "answer": "Semerre, mivel a dredet a bal oldali játékos mezőjébe rakom nem átadom",
+    "image": null
+  },
+  {
+    "id": 39,
+    "question": "Hogy működik a dred továbbadása? (1 pont)",
+    "answer": "A dredet mindig a balra lévő játékos mezőjébe kell rakni és így forog a dred játék közben.",
+    "image": null
+  },
+  {
+    "id": 40,
+    "question": "Ha a dred a játék elején kerül a meződbe mit mondasz? (1 pont)",
+    "answer": "játék",
+    "image": null
+  },
+  {
+    "id": 41,
+    "question": "Melyik játékos fog kikanalazni előszőr? (1 pont)",
+    "answer": "Az, aki a játékot mondta",
+    "image": null
+  },
+  {
+    "id": 42,
+    "question": "Mikor nézheted meg a kanalaidat? (1 pont)",
+    "answer": "Az után, ha elhangzott a játék szó és akkor is először az osztó és csak utána a többi játékos",
+    "image": null
+  },
+  {
+    "id": 43,
+    "question": "Milyen mondatokkal lehet elkezdeni a kört és ezek milyen jelentéssel bírnak a többi játékos felé? (8 pont)",
+    "answer": "„Mehet a játék” mondat hangzik el, ha a kirakott kanálból egy van a játékosnál.\n„Játék emelve: Vivat!” mondat hangzik el, ha a hívott kanálból kettő van nála.\n„Játék emelve: Vivant!” mondat hangzik el, ha a hívott kanálból három megegyező van nála.\n„Játék emelve: Vivant omnes luces!” mondat hangzik el, ha a hívott kanálból mind a négy nála van.",
+    "image": null
+  },
+  {
+    "id": 44,
+    "question": "Merre halad a kikanalazás? (1 pont)",
+    "answer": "Jobbról balra",
+    "image": null
+  },
+  {
+    "id": 45,
+    "question": "Mit tudsz meg ha a játék elején a „Mehet a játék” mondat hangzik el? (1 pont)",
+    "answer": "a kirakott kanálból egy van a játékosnál.",
+    "image": null
+  },
+  {
+    "id": 46,
+    "question": "Mit tudsz meg ha a játék elején a „Játék emelve: Vivat!” mondat hangzik el? (1 pont)",
+    "answer": "a hívott kanálból kettő van nála.",
+    "image": null
+  },
+  {
+    "id": 47,
+    "question": "Mit tudsz meg ha a játék elején a „Játék emelve: Vivant!” mondat hangzik el? (1 pont)",
+    "answer": "a hívott kanálból három megegyező van nála.",
+    "image": null
+  },
+  {
+    "id": 48,
+    "question": "Mit tudsz meg ha a játék elején a „Játék emelve: Vivant omnes luces!” mondat hangzik el? (1 pont)",
+    "answer": "a hívott kanálból mind a négy nála van.",
+    "image": null
+  },
+  {
+    "id": 49,
+    "question": "Ha a kikanalazótól „játék” hangzott el, milyen sorendbe vannak a bemondások? (3 pont)",
+    "answer": "„kontra”\n„rekontra”\n„Schmollis”",
+    "image": null
+  },
+  {
+    "id": 50,
+    "question": "Ha a kikanalazótól „játék” hangzott el, és csúszik a sorend és már volt egy felülütés akkor az utolsó játékos felülütésekor mit kell mondania a játékosnak? (1 pont)",
+    "answer": "Pereat",
+    "image": null
+  },
+  {
+    "id": 51,
+    "question": "Igaz vagy Hamis, Ha a kikanalazótól „játék” hangzott el, és a társa (vele szemben ülő játékos) üti felül előszőr akkor köteles rekontrát mondani. (1 pont)",
+    "answer": "Hamis",
+    "image": null
+  },
+  {
+    "id": 52,
+    "question": "Kör végén menyi lapra kell kiegészíteni a kezedben lévő lapokat? (1 pont)",
+    "answer": "4 lap",
+    "image": null
+  },
+  {
+    "id": 53,
+    "question": "Ha a húzópakliban nincs elég lap, hogyan egészítjük ki a kézben lévő lapokat? (1 pont)",
+    "answer": "A lapokat egyenlően kell felvenni/elosztani",
+    "image": null
+  },
+  {
+    "id": 54,
+    "question": "Mikor van kötelező felülütés? (1 pont)",
+    "answer": "Első és utolsó körben",
+    "image": null
+  },
+  {
+    "id": 55,
+    "question": "Ha a kikanalazótól „Vivat!” hangzott el, mit kell az első felülütő játékosnak mondani ilyenkor? (1 pont)",
+    "answer": "Pereat",
+    "image": null
+  },
+  {
+    "id": 56,
+    "question": "Ha a kikanalazótól „Vivat!” hangzott el, ha már elhangzott a Pereat mint felölütés mint kell mondani a 2.-dik felülütőnek? (1 pont)",
+    "answer": "Crescat!",
+    "image": null
+  },
+  {
+    "id": 57,
+    "question": "Ha a kikanalazótól „Vivat!” hangzott el, de a körben csak egy Pereat volt, mint felülütés milyen szavakkal kezdheti meg a következő kört? (1 pont)",
+    "answer": "Nem véletlen Vivat!",
+    "image": null
+  },
+  {
+    "id": 58,
+    "question": "Ha a kikanalazótól „Vivat!” hangzott el, de már elhangzott a Crescat felülütés is milyen szavakkal fejezhati be körét? (1 pont)",
+    "answer": "Nem véletlen Lux!",
+    "image": null
+  },
+  {
+    "id": 59,
+    "question": "Ha a kikanalazótól „Vivat!” hangzott el, de azt nem követte felülütés milyen szavakkal hívhatja le ugyanazon kannalat a következő körre? (1 pont)",
+    "answer": "Sequitur vagy Sequitur Lux",
+    "image": null
+  },
+  {
+    "id": 60,
+    "question": "Ha a kikanalazótól „Vivat!” hangzott el, és nem ugyanazt a kártyát akarja kijátszani a következő körbe? (1 pont)",
+    "answer": "„Játék”, „Játék helyett Vivat” vagy „Játék helyett Vivant” mondatok valamelyikével",
+    "image": null
+  },
+  {
+    "id": 61,
+    "question": "Ha a kikanalazótól „Vivant!” hangzott el, mit mondhat az a játékos, akinél a 4-dik lap van és felülütni kívánja a lenn lévőt? (1 pont)",
+    "answer": "Pereat!",
+    "image": null
+  },
+  {
+    "id": 62,
+    "question": "Ha a kikanalazótól „Vivant!” hangzott el, és már volt egy felülütés Pereattal akkor a kikanalazó milyen szavak kíséretében ütheti felül ezt? (1 pont)",
+    "answer": "Nem véletlen Luces",
+    "image": null
+  },
+  {
+    "id": 63,
+    "question": "Ha a kikanalazótól „Vivant!” hangzott el, De nem érkezett rá ütés akkor a következő azonos lapját milyen szavakkal hívhatja? (1 pont)",
+    "answer": "Sequuntur",
+    "image": null
+  },
+  {
+    "id": 64,
+    "question": "Ha a kikanalazótól „Vivant!” hangzott el, de a második körben nem érkezett rá ütés milyen szavakkal hívhatja ki harmadik azonos lapját? (1 pont)",
+    "answer": "Sequitur vagy Sequitur Lux",
+    "image": null
+  },
+  {
+    "id": 65,
+    "question": "Ha a kikanalazótól „Vivant!” hangzott el, és a Sequuntur hívására már érkezett ütés milyen szavak kíséretében ütheti azt felül? (1 pont)",
+    "answer": "Nem hiába árultam el Luxomat",
+    "image": null
+  },
+  {
+    "id": 66,
+    "question": "Igaz vagy Hamis, Ha a kikanalazótól „Vivant omnes luces” hangzott el az azt jelenti, hogy mind a 4 lap nála egyforma. (1 pont)",
+    "answer": "Igaz",
+    "image": null
+  },
+  {
+    "id": 67,
+    "question": "Az utolsó körben a hívó milyen mondattal hívhatja utolsó kanalát? (1 pont)",
+    "answer": "Mehet az utolsó",
+    "image": null
+  },
+  {
+    "id": 68,
+    "question": "A parti végén hogyan számolod meg kanalaidat? (1 pont)",
+    "answer": "Hangosan számolom a kanalakat”. A koca 11, a decuma 10, ...stb...",
+    "image": null
+  },
+  {
+    "id": 69,
+    "question": "Igaz vagy Hamis (Válaszát indokolja), az összes felkent figurát le kell inni. (1 pont, felezhető)",
+    "answer": "Hamis. mert a verés is figurának számít, de nem kell leinni mert abból áll össze az ásó",
+    "image": null
+  },
+  {
+    "id": 70,
+    "question": "Melyik szavak kíséretében hagyhatod el a helyedet játék közben? (1 pont)",
+    "answer": "Tempus helyemre és Cerevisemre",
+    "image": null
+  },
+  {
+    "id": 71,
+    "question": "Ha távozol az asztaltól menyi fecskét kenhetnek fel a többi játékosok? (1 pont)",
+    "answer": "Amennyit csak akarnak",
+    "image": null
+  },
+  {
+    "id": 72,
+    "question": "Mit kell mondani miután visszaülsz az asztalhoz? (1 pont)",
+    "answer": "Tempus ex",
+    "image": null
+  },
+  {
+    "id": 73,
+    "question": "Igaz vagy Hamis (Válaszát indokolja), A Tempus ex kimondásával az összes fecske törlődik. (1 pont, felezhető)",
+    "answer": "Hamis, mert csak azok a fecskék törlődnek, amik távollét ideje alatt lettek felkenve",
+    "image": null
+  },
+  {
+    "id": 74,
+    "question": "Igaz vagy Hamis (Válaszát indokolja), A Tempus ex csak akkor kell elhangoznia, ha lett fecske felkenve a távolét ideje alatt. (1 pont, felezhető)",
+    "answer": "Hamis, mert minden esetben el kell hangoznia",
+    "image": null
+  },
+  {
+    "id": 75,
+    "question": "Milyen két figuracsoportot különböztetünk meg? (1 pont)",
+    "answer": "Dicsőség és szégyen figura",
+    "image": null
+  },
+  {
+    "id": 76,
+    "question": "Sorolja fel a dicsőség figurákat. (4 pont)",
+    "answer": "nagy Schmollis, kis Schmollis, Dennewiss, ásaó",
+    "image": null
+  },
+  {
+    "id": 77,
+    "question": "Sorolja fel a szégyen figurákat. (4 pont)",
+    "answer": "p..., akasztófa, létra, szabó.",
+    "image": null
+  },
+  {
+    "id": 78,
+    "question": "Igaz vagy Hamis (válaszát indokolja), Az összes dicsőségfiguránál le kell innia azt az összes játékosnak. (1 pont, felezhető)",
+    "answer": "Hamis, mert az ásót csak az egyik páros issza.",
+    "image": null
+  },
+  {
+    "id": 79,
+    "question": "A szégyenfigurákat kinek kell leinnia? (1 pont)",
+    "answer": "Csak az egyik párosnak kell leinnia",
+    "image": null
+  },
+  {
+    "id": 80,
+    "question": "Mikor lehet felkeni a nagy Schmollis dicsőség figurát? (1 pont)",
+    "answer": "ha az első vagy utolsó ütés során 4 egyenértékű kanál jön ki, vagy a parti során egy ütésben 4 koca.",
+    "image": null
+  },
+  {
+    "id": 81,
+    "question": "Melyik figura az, ha az első vagy utolsó ütés során 4 egyenértékű kanál jön ki, vagy a parti során egy ütésben 4 koca. (1 pont)",
+    "answer": "nagy Schmollis",
+    "image": null
+  },
+  {
+    "id": 82,
+    "question": "Mikor lehet felkeni a kis Schmollis dicsőség figurát? (1 pont)",
+    "answer": "ha a parti során egy ütésben 4 egyenértékű kanál van.",
+    "image": null
+  },
+  {
+    "id": 83,
+    "question": "Melyik figura az, ha a parti során egy ütésben 4 egyenértékű kanál van. (1 pont)",
+    "answer": "kis Schmollis",
+    "image": null
+  },
+  {
+    "id": 84,
+    "question": "Mikor lehet felkeni a Dennewiss dicsőség figurát? (1 pont)",
+    "answer": "ha a két fél ugyanannyi, azaz 60-60 pontot számol magának.",
+    "image": null
+  },
+  {
+    "id": 85,
+    "question": "Melyik figura az, ha a két fél ugyanannyi, azaz 60-60 pontot számol magának. (1 pont)",
+    "answer": "Dennewiss",
+    "image": null
+  },
+  {
+    "id": 86,
+    "question": "Mikor lehet felkeni a p... szégyen figurát? (1 pont)",
+    "answer": "ha az egyik félnek egy értékes ütése sincs.",
+    "image": null
+  },
+  {
+    "id": 87,
+    "question": "Melyik figura az, ha az egyik félnek egy értékes ütése sincs. (1 pont)",
+    "answer": "P...",
+    "image": null
+  },
+  {
+    "id": 88,
+    "question": "Mikor lehet felkeni az akasztófa szégyen figurát? (1 pont)",
+    "answer": "ha az egyik félnek egyáltalán nincs ütése.",
+    "image": null
+  },
+  {
+    "id": 89,
+    "question": "Melyik figura az, ha az egyik fél a parti során 2-14 pont közötti értéket számol. (1 pont)",
+    "answer": "létra",
+    "image": null
+  },
+  {
+    "id": 90,
+    "question": "Mikor lehet felkeni a létra szégyen figurát? (1 pont)",
+    "answer": "ha az egyik fél a parti során 2-14 pont közötti értéket számol.",
+    "image": null
+  },
+  {
+    "id": 91,
+    "question": "Melyik figura az, ha az egyik fél a parti során 15-29 pont közötti értéket számol. (1 pont)",
+    "answer": "szabó",
+    "image": null
+  },
+  {
+    "id": 92,
+    "question": "Mikor lehet felkeni a szabó szégyen figurát? (1 pont)",
+    "answer": "ha az egyik fél a parti során 15-29 pont közötti értéket számol.",
+    "image": null
+  },
+  {
+    "id": 93,
+    "question": "Melyik figura az, ha az egyik fél a parti során 30-59 pont közötti értéket számol. (1 pont)",
+    "answer": "verés",
+    "image": null
+  },
+  {
+    "id": 94,
+    "question": "Mikor lehet felkeni a verés figurát? (1 pont)",
+    "answer": "ha az egyik fél a parti során 30-59 pont közötti értéket számol. Három verés alkot egy ásót.",
+    "image": null
+  },
+  {
+    "id": 95,
+    "question": "Mikor kell leinni a felkent figurát? (1 pont)",
+    "answer": "Felkenés után azonnal",
+    "image": null
+  },
+  {
+    "id": 96,
+    "question": "Kinek kell leinni a szégyen figurát? (1 pont)",
+    "answer": "Csak a vesztes félnek",
+    "image": null
+  },
+  {
+    "id": 97,
+    "question": "Igaz vagy Hamis (Válaszát indokolja) A verést minden esetben le kell inni. (1 pont, felezhető)",
+    "answer": "Hamis, mert a verést csak akkor kell leinni, ha összejött belőle egy ásó",
+    "image": null
+  },
+  {
+    "id": 98,
+    "question": "Melyik figurákat kell az összes játékosnak levonni? (1 pont)",
+    "answer": "nagy Schmollis, Dennewiss",
+    "image": null
+  },
+  {
+    "id": 99,
+    "question": "Igaz vagy Hamis, A nagy schmollist és a Dennewiss figurákat minden játékosnak le kell vonni? (1 pont)",
+    "answer": "Igaz",
+    "image": null
+  },
+  {
+    "id": 100,
+    "question": "Sorolja fel azokat a figurákat, amiket egy teli kórsóval kell levonni. (6 pont)",
+    "answer": "nagy Schomllis, kis Schmollis, Dennewiss, P..., akasztófa, ásó",
+    "image": null
+  },
+  {
+    "id": 101,
+    "question": "Melyik az a figura, amit ¾ korsó elfogyasztásával kell leinni? (1 pont)",
+    "answer": "létra",
+    "image": null
+  },
+  {
+    "id": 102,
+    "question": "Mennyit kell inni egy létra felkenésénél? (1 pont)",
+    "answer": "¾ korsó",
+    "image": null
+  },
+  {
+    "id": 103,
+    "question": "Melyik az a figura, amit ½ korsó elfogyasztásával kell leinni? (1 pont)",
+    "answer": "szabó",
+    "image": null
+  },
+  {
+    "id": 104,
+    "question": "Mennyit kell inni egy szabó felkenésénél? (1 pont)",
+    "answer": "½ korsó",
+    "image": null
+  },
+  {
+    "id": 105,
+    "question": "Dicsőség figura felkenése után kinek kell kezdeni-e a nótát? (1 pont)",
+    "answer": "Akinek a mezőjébe fel lett kenve a figura / Aki elvitte az adott ütést",
+    "image": null
+  },
+  {
+    "id": 106,
+    "question": "Szégyen figura esetén kinek kell intonálni az adott nótát? (1 pont)",
+    "answer": "Az inni készülő fél.",
+    "image": null
+  },
+  {
+    "id": 107,
+    "question": "Melyik nótarészletnél kell elkezdeni leinni a nagy és kis Schmollist figurát? (1 pont)",
+    "answer": "„ S evezz tovább rajta!”",
+    "image": null
+  },
+  {
+    "id": 108,
+    "question": "Melyik nótarészletnél kell elkezdeni leinni a Dennewisst figurát? (1 pont)",
+    "answer": "„Ez már azért túlzás”",
+    "image": null
+  },
+  {
+    "id": 109,
+    "question": "Melyik nótarészletnél kell elkezdeni leinni a p...-t figurát? (1 pont)",
+    "answer": "„Eltartani muszáj”",
+    "image": null
+  },
+  {
+    "id": 110,
+    "question": "Melyik nótarészletnél kell elkezdeni leinni az akasztófa figurát? (1 pont)",
+    "answer": "„S lóg az akasztófán”",
+    "image": null
+  },
+  {
+    "id": 111,
+    "question": "Melyik nótarészletnél kell elkezdeni leinni a létra figurát? (1 pont)",
+    "answer": "„Íme mily’ jó dolog”",
+    "image": null
+  },
+  {
+    "id": 112,
+    "question": "Melyik nótarészletnél kell elkezdeni leinni a szabót figurát? (1 pont)",
+    "answer": "„Húzd össze nadrágod”",
+    "image": null
+  },
+  {
+    "id": 113,
+    "question": "Melyik nótarészletnél kell elkezdeni leinni az ásót figurát? (1 pont)",
+    "answer": "„Részeges barátom”",
+    "image": null
+  },
+  {
+    "id": 114,
+    "question": "Ki az a profán? (1 pont)",
+    "answer": "Játékban nem lévő személy",
+    "image": null
+  },
+  {
+    "id": 115,
+    "question": "Ki jelenthet be érvénytelen egész Cerevist? (1 pont)",
+    "answer": "A kár ezt egy profán is megteheti",
+    "image": null
+  },
+  {
+    "id": 116,
+    "question": "Mit jelent a Renonsz? (1 pont)",
+    "answer": "a kártyajátszmát érvénytelenné tevő tévedés, hiba.",
+    "image": null
+  },
+  {
+    "id": 117,
+    "question": "Milyen Renonsz fejtákat ismer? (3 pont)",
+    "answer": "Érvénytelen kör\nÉrvénytelen Cereviszfigura\nÉrvénytelen egész Cerevis",
+    "image": null
+  },
+  {
+    "id": 118,
+    "question": "Milyen hibák révén lehet Érvénytelen Cerevisfigura Renonszt bejelenteni? (1 pont)",
+    "answer": "Ha nem megfelelően lett felkenve a figura",
+    "image": null
+  },
+  {
+    "id": 119,
+    "question": "Mik azok az okok amikor egy Érvénytelen Cerevisfigura Renonszt esetén a figura nem kerül törlésre? (4 pont)",
+    "answer": "Ha egy figurát túl kevés anyaggal ittak le\nHa a nóta nem megfelelő részénél isszák le a figurát\nHa a figura leivását követően a játékos elfelejti azt mondani „repül” és nekifog egy következő figura leivásának",
+    "image": null
+  },
+  {
+    "id": 120,
+    "question": "Hogy jelentesz be Renonszt? (2 pont)",
+    "answer": "Az érvénytelenítő megfogja a Dredet és rábök vele a hibát vétő játékos mezejébe, a következő szavak kíséretében: „Egy és egy az kettő, és még egy az a kisszentszám, (Ide az indok: Érvénytelen cereviszfigura stb...)”, majd megtörténik a hibavétésért a levonás",
+    "image": null
+  },
+  {
+    "id": 121,
+    "question": "Milyen hibák révén lehet Érvénytelen egész Cerevist bejelenteni? (4 pont)",
+    "answer": "Ha a Dred nem a megfelelő mezőben van\nHa egy elszámolatlan figura marad a mezőben, de az ásót már leitták\nHa minden Cerevisjátékos elhagyja az asztalt, anélkül, hogy elvinnék a Cerevisdredet\nHa a figurákat profán krétával kenik fel, nem pedig a Cerevisdreddel",
+    "image": null
+  },
+  {
+    "id": 122,
+    "question": "Mi egy egész Cerevis érvénytelenítésének konzekvenciája? (1 pont)",
+    "answer": "Az, hogy az összes figurát még egyszer le kell inni a játékosoknak. Ha ez megtörtént a Dred visszaadható és a játék folytatható.",
+    "image": null
+  },
+  {
+    "id": 123,
+    "question": "Mi történik, ha az Érvénytelen egész Cerevisz nem volt jogos?",
+    "answer": "A szabálytalanul érvénytelenítő embernek az összes felkent Figurát le kell innia, de a Figurákat nem számolhatja el. A Figurákat tetszőleges sorrendben le lehet inni. Csupán arra kell ügyelni, hogy az ásókat nem szabad leinni, ha a saját mezelyükben Fecske is található.",
+    "image": null
+  },
+  {
+    "id": 124,
+    "question": "Igaz vagy Hamis (Válaszát indokolja) A figurák felkenése párosoktól független és mindenki a maga ütésének megfelelőt keni fel. (1 pont, felezhető)",
+    "answer": "Hamis, mert A Figurák felkenésében a párosok mindkét tagja részt vesz. Az egyik játékosnak a dicsőségfigurákat, párjának pedig a szégyenfigurákat kell kennie.",
+    "image": null
+  },
+  {
+    "id": 125,
+    "question": "Hova kell felkeni a Dennewiss figurát? (1 pont)",
+    "answer": "A cereviszkorsóba",
+    "image": null
+  },
+  {
+    "id": 126,
+    "question": "Ki keni fel a Dennewiss figurát? (1 pont)",
+    "answer": "Mind a négy játékos",
+    "image": null
+  },
+  {
+    "id": 127,
+    "question": "Mi a menete a Dennewiss figura felkenésének? (1 pont)",
+    "answer": "Az utolsóként ütő játékos, a Cereviskorsónak saját mezőjébe eső bal sarkába berajzol egy fecskét, majd a Dredet lerakja e mellé. A baloldali szomszédja szintén rajzol egy fecskét a saját mezőjéhez tartozó bal sarokba, és ő is továbbadja a Dredet. Az utolsó két játékos is így tesz.",
+    "image": null
+  },
+  {
+    "id": 128,
+    "question": "Igaz vagy Hamis (Válaszát indokolja) A Dennewiss figura felkenésekor a soron következő játékos elveszi az előző játékostól a dredet és ő is felrajzol egy fecskét a cereviszkorsóba. (1 pont, felezhető)",
+    "answer": "Hamis, mert a Dredet a fecske felrajzolása után nem tuvább adjuk, hanem a felkent fecske melé rakjuk le és onnan kell elveni a soron következő játékosnak",
+    "image": null
+  },
+  {
+    "id": 129,
+    "question": "A Dennewiss figura leszámolásánál elhangzik-e a „Repül” kifejezés? (Ha igen mien formában és hogy zajlik a leszámolás?)",
+    "answer": "Igen, Az első fecskét felkenő játékos, az elsőnek megrajzolt fecskétől balról jobbra haladva húz egy vonalat a következő fecskéig. És továbbadja a krétát, majd a többi játékosok is ugyanígy berajzolja a vonalakat.",
+    "image": null
+  },
+  {
+    "id": 130,
+    "question": "Szabájos-e az a Dennewiss amelyknek a vonal vagy a fecske része hozzáér a cereviszkorsóhoz vagy benne található csilaghoz? (1 pont)",
+    "answer": "Nem, nem szabályos",
+    "image": null
+  },
+  {
+    "id": 131,
+    "question": "Rajzolj egy Nagy Schmollist. (1 pont)",
+    "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_131.png"
+  },
+  {
+    "id": 132,
+    "question": "Rajzolj egy Kis Schmollist. (1 pont)",
+    "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_132.png"
+  },
+  {
+    "id": 133,
+    "question": "Rajzol egy P... (1 pont)",
+    "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_133.png"
+  },
+  {
+    "id": 134,
+    "question": "Igaz vagy Hamis, A P... a pontokat nem kötelező lerajzolni. (1 pont)",
+    "answer": "Hamis",
+    "image": null
+  },
+  {
+    "id": 135,
+    "question": "Rajzolj egy akasztófát (1 pont)",
+    "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_135.png"
+  },
+  {
+    "id": 136,
+    "question": "Igaz vagy Hamis, Az akasztófánál alul lévő vonalak számának 7 nek kell lennie minden esetben. (1 pont)",
+    "answer": "Igaz",
+    "image": null
+  },
+  {
+    "id": 137,
+    "question": "Rajzolj egy Létrát. (1 pont)",
+    "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_137.png"
+  },
+  {
+    "id": 138,
+    "question": "Hány foka lehet a létrának? (1 pont)",
+    "answer": "min 3, max 7",
+    "image": null
+  },
+  {
+    "id": 139,
+    "question": "Rajzolj egy Szabó figurát. (1 pont)",
+    "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_139.png"
+  },
+  {
+    "id": 140,
+    "question": "Igaz vagy Hamis, Az olló két szárának nem szükséges a középvonalon érintkeznie. (1 pont)",
+    "answer": "Igaz",
+    "image": null
+  },
+  {
+    "id": 141,
+    "question": "A figurákon mikor szabad vonalat keresztülhúzni? (1 pont)",
+    "answer": "Akkor, ha egy figura már fel van kenve és a játék folyamán ismét egy ilyet sikerült kijátszani, úgy a figurán keresztülhúzott vonalak segítenek az elszámolásban.",
+    "image": null
+  },
+  {
+    "id": 142,
+    "question": "Melyik figura nem kerül felkenésre azonnal a kijátszása után? (1 pont)",
+    "answer": "Dennewiss",
+    "image": null
+  },
+  {
+    "id": 143,
+    "question": "A figurák leivása milyen szavak elhangzásával érvényesek (Részletezze) (2 pont)",
+    "answer": "A dal megfelelő részénél, mielőtt a figurát leszámoló játékosok elkezdenek inni, azt kell mondaniuk „Repül” vagy „Repülnek”. Csak ekkor számolható el érvényesen a figura. Az ivás befejeztével az ellenpár egyik játékosának azt kell mondania „elszámolva”.",
+    "image": null
+  },
+  {
+    "id": 144,
+    "question": "Rajzoljon le egy verést. (1 pont)",
+    "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_144.png"
+  },
+  {
+    "id": 145,
+    "question": "Rajzoljon le egy Ásót. (1 pont)",
+    "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_145.png"
+  },
+  {
+    "id": 146,
+    "question": "Miből áll össze egy ásó? (1 pont)",
+    "answer": "3 - rom verésből",
+    "image": null
+  },
+  {
+    "id": 147,
+    "question": "Mikor fejezhető be a játék? (1 pont)",
+    "answer": "Ha 3-rom ásó összegyűlt",
+    "image": null
+  },
+  {
+    "id": 148,
+    "question": "Ha összegyűlt a 3-rom ásó, és a játékos úgy dönt, hogy be akarja fejezni a játékot ezt milyen mondat kíséretében teheti meg és hogyan? (2 pont)",
+    "answer": "Ilyenkor az utolsó leivást követő „Repül” elhangzását követően az illetékesnek „Cerevisia clausa sed nondum totaliter ex est” szavak kíséretében be kell fejeznie a harmadik ásót, majd le kell zárnia a teljes Cerevis mezőt.",
+    "image": null
+  },
+  {
+    "id": 149,
+    "question": "Ha összegyűlt a 3-rom ásó, és a játékos úgy dönt, hogy folytatni akarja a játékot ezt milyen mondat kíséretében teheti meg és hogyan? (2 pont)",
+    "answer": "Ha a játékot folytatni szeretnék, a két vonalat „Cerevisia clausa et nunc totaliert ex est” szavakkal kell összekötnie. Ezt követően a játék befejezése a Cerevisezők megállapodásán múlik.",
+    "image": null
+  },
+  {
+    "id": 150,
+    "question": "Igaz vagy Hamis (Válaszát indokolja) A játék, ha összegyűlt 3-rom ásó akkor a játékot muszáj befejezni. (1 pont, felezhető)",
+    "answer": "Hamis, mert Ha a játékot folytatni szeretnék, a két vonalat „Cerevisia clausa et nunc totaliert ex est” szavakkal kell összekötnie. Ezt követően a játék befejezése a Cerevisezők megállapodásán múlik.",
+    "image": null
+  },
+  {
+    "id": 151,
+    "question": "Mik azok a fecskék? (1 pont)",
+    "answer": "A fecskék a Cerevisjátékosok büntetésére szolgálnak",
+    "image": null
+  },
+  {
+    "id": 152,
+    "question": "Hogy néz ki a játék során egy felkent fecske? (1 pont)",
+    "answer": "x vagy kereszt",
+    "image": null
+  },
+  {
+    "id": 153,
+    "question": "Mi az a fecske és hogy néz ki? (1 pont)",
+    "answer": "A fecskék a Cerevisjátékosok büntetésére szolgálnak, a vétkesnek egy x-et (keresztet) kennek a területébe.",
+    "image": null
+  },
+  {
+    "id": 154,
+    "question": "Ki és kinek lehet felkenni fecskét? (1 pont)",
+    "answer": "Fecskét valamely Cerevisjátékos kenhet fel annak, aki vét a Cerevis valamely szabálya ellen",
+    "image": null
+  },
+  {
+    "id": 155,
+    "question": "Milyen mondat elhangzásával lehet elkezdeni a fecske felkenését? (1 pont)",
+    "answer": "„Egy és egy az kettő és még egy az a kisszentszám”",
+    "image": null
+  },
+  {
+    "id": 156,
+    "question": "Mit kell mondani, ha a vétkes játékos felvilágosítást kér? (1 pont)",
+    "answer": "„A felvilágosítás két fecskébe kerül.”",
+    "image": null
+  },
+  {
+    "id": 157,
+    "question": "A felvilágosításra felkent 2 fecskét milyen mondat elhangzása mellett kenheted fel? (1 pont)",
+    "answer": "„Egy és egy az kettő és még egy az a kisszentszám”",
+    "image": null
+  },
+  {
+    "id": 158,
+    "question": "Hogyan kell közölni az okot a vétkes játékossal? (1 pont)",
+    "answer": "Dredell a kézben mondani kell, hogy: - „Soha ne áruld el a kisszentszámot / nagyszentszámot / az anyagot stb.,",
+    "image": null
+  },
+  {
+    "id": 159,
+    "question": "A vétkes játékos hogyan kér bocsánatot? (1 pont)",
+    "answer": "„Elárultam a kisszentszámot / nagyszentszámot / az anyagot stb.",
+    "image": null
+  },
+  {
+    "id": 160,
+    "question": "Igaz vagy Hamis (Válaszát indokolja) A vétkes játékosnak kötelező bocsánatot kérnie. (1 pont, felezhető)",
+    "answer": "Hamis, csak akkor kell bocsánatot kérni, ha felvilágosítást is kért",
+    "image": null
+  },
+  {
+    "id": 161,
+    "question": "Ha a vétkes játékos nem kér felvilágosítást milyen mondattal fejezed be a fecskék felkenését? (1 pont)",
+    "answer": "„A fecskét felkenem, és Dreddel a kezemben felvilágosítást adok: Soha ne áruld el...”",
+    "image": null
+  },
+  {
+    "id": 162,
+    "question": "Írd le azokat a mondatokat, amik elhangoznak vagy elhangozhatnak a fecskék felkenésénél (Válaszát részletezze) (5 pont)",
+    "answer": "- Felkenő játékos első mondata: „ _Egy és egy az kettő és még egy az a kisszentszám_ ”\n- Ha a vétkes kér felvilágosítást:\n   o A felkenő játékosnak kell mondani: „ _A felvilágosítás két fecskébe kerül._ ”\n   o Majd a felkenő játékos Dreddel a kézben közölni kell az okot: „ _Soha ne_ _áruld el a kisszentszámot / nagyszentszámot / az anyagot stb.,_\n   o A vétkes kötelezöen bocsánatot kér: „ _Elárultam a kisszentszámot /_ _nagyszentszámot / az anyagot stb._\n- Ha a vétkes nem kér felvilágosítást:\n   o A felkenő játékos így felyezi be a fecskék felkenését: „ _A fecskét felkenem,_ _és Dreddel a kezemben felvilágosítást adok: Soha ne áruld el...”_",
+    "image": null
+  },
+  {
+    "id": 163,
+    "question": "Mi történik, ha a fecske igaságtalanul lett felkenve? (1 pont)",
+    "answer": "Ha valakinek igazságtalanul kentek fel fecskéket, és a sértettől nem vonják vissza a fecskéket, úgy ennek következtében a fecskéket méltatlanul felkenő játékosnak, az általa felkent számú fecskék dupláját kell felkenni.",
+    "image": null
+  },
+  {
+    "id": 164,
+    "question": "Igaz vagy Hamis (Válaszát indokolja), Ha a fecske igaságtalanul lett felkenve akkor az, aki igaságtalanul felkente le kell innia az összes általa felkent fecskét. (1 pont, felezhető)",
+    "answer": "Hamis, mert A felkent fecskék dupláját kell magának felkeni és nem kell azonnal leinni.",
+    "image": null
+  },
+  {
+    "id": 165,
+    "question": "Menyi fecske fellel meg egy korsó sőrénk? (1 pont)",
+    "answer": "7 darab fecske",
+    "image": null
+  },
+  {
+    "id": 166,
+    "question": "Igaz vagy hamis (Válaszát indokolja), Egy korsó sör az 10 fecskének felel meg (1 pont, felezhető)",
+    "answer": "Hamis, mert egy kórsós sör az 7 fecske",
+    "image": null
+  },
+  {
+    "id": 167,
+    "question": "Menyi fecskének felel meg fél korsó sör? (1 pont)",
+    "answer": "3 - rom darab fecskének",
+    "image": null
+  },
+  {
+    "id": 168,
+    "question": "Igaz vagy Hamis (Válaszát indokolja), Fél korsó sör az 3-rom fecskének felel meg (1 pont, felezhető)",
+    "answer": "Igaz, mert a játék szerint 7 egy teljes korsó annak a fele 3-rom",
+    "image": null
+  },
+  {
+    "id": 169,
+    "question": "Mit kell mondani annak, aki leakarja inni fecskéit? (1 pont)",
+    "answer": "„Röpül a (ide jön a megfelelő szám) fecském!”",
+    "image": null
+  },
+  {
+    "id": 170,
+    "question": "Milyen mondatot kell megvárnia a fecskéit le ivó játékosnak, hogy érvényes legyen a leivás? (1 pont)",
+    "answer": "„Hagyd őket repülni!”",
+    "image": null
+  },
+  {
+    "id": 171,
+    "question": "Mit kell mondani a fecskéket le ivó játékosnak miután leitta fecskéit? (1 pont)",
+    "answer": "„röpülnek”",
+    "image": null
+  },
+  {
+    "id": 172,
+    "question": "A „röpülnek” ki fejezés hallatán mit kell mondani és mi a teendő annak a játékosnak, aki ezt mondta? (1 pont)",
+    "answer": "„leszámolva”, majd kitörli a büntetett leivott fecskéit.",
+    "image": null
+  },
+  {
+    "id": 173,
+    "question": "Igaz vagy Hamis (Válaszát indokolja), Akkor is érvényes a leivás, ha nem mutat rá a le ivó játékos a fecskéire, amiket leiszik (1 pont, felezhető)",
+    "answer": "Hamis, mert csak akkor érvényes, ha dreddel a kézben rámutat a leinni kívánt fecskékre",
+    "image": null
+  },
+  {
+    "id": 174,
+    "question": "Egyszerre maximum menyi fecskét lehet leinni? (1 pont)",
+    "answer": "Max 7 darab fecskét",
+    "image": null
+  },
+  {
+    "id": 175,
+    "question": "Milyen mondatoknak kell elhangoznia a fecskék leivásánál. (4 pont)",
+    "answer": "- Le ivó: „ _Röpül a (ide jön a megfelelő szám) fecském!_ ”\n- Másik játékos: „ _Hagyd őket repülni!”._\n- Le ivó: „ _röpülnek”,_\n- Másik játékos: „ _leszámolva”._",
+    "image": null
+  },
+  {
+    "id": 176,
+    "question": "Igaz vagy hamis (Válaszát indokolja), A le ivó játékos magának egyáltalán nem törölhet ki fecskét. (1 pont, felezhető)",
+    "answer": "Hamis, mert ha a „leszámolva” bemondó játékos az elsőt kitörölte utána a többit a büntettet játékos is kitörölheti.",
+    "image": null
+  },
+  {
+    "id": 177,
+    "question": "Igaz vagy Hamis (Válaszát indokolja), A fecskéket minden kör végén köteles a büntettet játékos leinni. (1 pont, felezhető)",
+    "answer": "Hamis, mert a fecskéket bármikor le lehet inni, csak ahhoz, hogy a játék véget érjen nem lehet a nyertes mezőben fecske.",
+    "image": null
+  },
+  {
+    "id": 178,
+    "question": "Kit hívunk kibicnek? (1 pont)",
+    "answer": "Azt a személyt, aki az egyik Cerevisjátékos mellé leül, és mindazt, amit ez a játékos leiszik, azt ő is leissza.",
+    "image": null
+  },
+  {
+    "id": 179,
+    "question": "Hogy hívjuk az, aki a játékos mellet ül és segíti őt, illetve passzívan játszik és tanulja a játékot? (1 pont)",
+    "answer": "Kibic",
+    "image": null
+  },
+  {
+    "id": 180,
+    "question": "A kibic mit kenhet fel egyedül a játék közben? (1 pont)",
+    "answer": "Csak fecskét és az is csak egy másik kibic számára",
+    "image": null
+  },
+  {
+    "id": 181,
+    "question": "Igaz vagy Hamis (Válaszát indokolja), A kibic dicsőség és szégyen figurát is felkenhet ütéstől függően. (1 pont, felezhető)",
+    "answer": "Hamis, mert csak fecskét kenhet fel",
+    "image": null
+  },
+  {
+    "id": 182,
+    "question": "Mikor szálhat be a kibic a játékba? (1 pont)",
+    "answer": "Akár a játék megkezdése után is de le kell innia a már felkent figurákat",
+    "image": null
+  },
+  {
+    "id": 183,
+    "question": "Mi az a Krétaszabály? (1 pont)",
+    "answer": "Ha játék közben a Dred már a végéhez közeledik, akkor egy új Dredet kell elővenni. A régi maradékát az új Dreden el kell koptatni, a játék csak ezt követően folytatódhat.",
+    "image": null
+  },
+  {
+    "id": 184,
+    "question": "Ha fogyóban a dred mit kell csinálni? (1 pont)",
+    "answer": "egy új Dredet kell elővenni. A régi maradékát az új Dreden el kell koptatni és utána lehet folytatni a játékot",
+    "image": null
+  },
+  {
+    "id": 185,
+    "question": "Igaz vagy Hamis (Válaszát indokolja), Ha a Dred fogyóban akkor elég egy másikkal folytatni a játékot. (1 pont, felezhető)",
+    "answer": "Hamis, mert Ha játék közben a Dred már a végéhez közeledik, akkor egy új Dredet kell elővenni. A régi maradékát az új Dreden el kell koptatni, a játék csak ezt követően folytatódhat.",
+    "image": null
+  },
+  {
+    "id": 186,
+    "question": "Mikor rajzolják körbe a cerevis asztalt? (1 pont)",
+    "answer": "Amikor befejezik a játékot",
+    "image": null
+  },
+  {
+    "id": 187,
+    "question": "Mi a cerevis játék vége? (mit kell tenni, illetve rajzolni) (2 pont)",
+    "answer": "A kiürített Cereviskorsókat mindenki a saját mezőjébe fejjel lefelé lerakja, majd az utolsó ásó hegyétől kezdve, balról jobbra haladva, egy zárt hurkot kell rajzolni.",
+    "image": "images/quiz/quiz_image_187.png"
+  },
+  {
+    "id": 188,
+    "question": "Mikor kell a cereviszkorsót ki inni és fejel lefelé a játékosmezőbe helyezni? (1 pont)",
+    "answer": "A játék végén",
+    "image": null
+  },
+  {
+    "id": 189,
+    "question": "Milyen irányba kell a bekerítést végezni? (1 pont)",
+    "answer": "Ballról jobbra",
+    "image": null
+  },
+  {
+    "id": 190,
+    "question": "Igaz vagy Hamis, A rajzolt hurokban minden figurának benne kell lennie (1 pont)",
+    "answer": "Igaz",
+    "image": null
+  },
+  {
+    "id": 191,
+    "question": "Igaz vagy Hamis, A játékot akkor is be lehet fejezni, ha van még felkenve fecske valamelyik játékosnál (1 pont)",
+    "answer": "hamis",
+    "image": null
+  },
+  {
+    "id": 192,
+    "question": "Mikor lehet a cereviszt a kocsma falára vagy plafonjára felrakni. (1 pont)",
+    "answer": "ha legalább 3 ásót és minden figurából egyet-egyet tartalmaz",
+    "image": null
+  },
+  {
+    "id": 193,
+    "question": "Mit kell feltüntetni a felkent cerevis mellet? (1 pont)",
+    "answer": "A játékosok neveit és a kocsma nevét is.",
+    "image": null
+  },
+  {
+    "id": 194,
+    "question": "Igaz vagy Hamis (Válaszát indokolja), Körbe rajzolás után a saját mezőjét a játékosnak kötelező meghosszabbítania. (1 pont, felezhető)",
+    "answer": "Hamis, mert csak szokás",
+    "image": null
+  },
+  {
+    "id": 195,
+    "question": "Felcserélhetik e a helyüket a kibic és a játékos? (1 pont)",
+    "answer": "igen fel",
+    "image": null
+  },
+  {
+    "id": 196,
+    "question": "A kibic bármikor távozhat az asztaltól? (válaszát részletezze) (1 pont)",
+    "answer": "A kibic belépése után nem távozhat az asztaltól csak az erre vonatkozó szabálynak megfelelően",
+    "image": null
+  },
+  {
+    "id": 197,
+    "question": "Mit tettek lehetővé az akadémikusok a kibicek bevonásával? (1 pont)",
+    "answer": "Azt, hogy a balekok is beléphessenek a játékba.",
+    "image": null
+  },
+  {
+    "id": 198,
+    "question": "Érvénytelen cerevisznek tekinthető-e az, ha 3-rom ásó után nincs befejezve a játék (válaszát részletezze) (2 pont)",
+    "answer": "Nem tekinthető érvénytelen cerevisznek mivel a megfelelő mondatokkal a játék akár a végtelenségig is játszható",
+    "image": null
+  },
+  {
+    "id": 199,
+    "question": "Írja le a cerevisznóta kezdő sorát (1 pont)",
+    "answer": "„Ha cimborák között Nem fogy ki a söröm”",
+    "image": null
+  },
+  {
+    "id": 200,
+    "question": "Igaz vagy Hamis a kibic csak kibicnek kenhet fel fecskét (1 pont)",
+    "answer": "Igaz",
+    "image": null
+  },
+  {
+    "id": 201,
+    "question": "Akar szóban tudásáról számot adni? (∞ pont)",
+    "answer": "igen mindenféleképpen",
+    "image": null
+  }
+]
