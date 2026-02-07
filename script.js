@@ -61,10 +61,31 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('active');
 
             // Show target section
-            const targetSection = document.getElementById(tabId);
             targetSection.classList.remove('hidden');
             targetSection.classList.add('active');
+
+            // Close dropdown by removing focus
+            btn.blur();
+            // Also remove 'show' class from all dropdowns
+            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('show'));
         });
+    });
+
+    // Dropdown Mobile Toggle
+    const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+    dropdownBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent closing immediately
+            const dropdown = btn.closest('.dropdown');
+            dropdown.classList.toggle('show');
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('show'));
+        }
     });
 
     // 3. Render Functions

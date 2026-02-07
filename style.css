@@ -167,14 +167,14 @@ nav {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--glass-bg);
+    background: #ffffff;
     min-width: 160px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     padding: 0.5rem;
     z-index: 1000;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    /* backdrop-filter: blur(16px); - Removed for opaque background */
+    /* -webkit-backdrop-filter: blur(16px); */
     border: 1px solid var(--glass-border);
     margin-top: 0.5rem;
 }
@@ -191,7 +191,8 @@ nav {
 }
 
 .dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
+.dropdown:focus-within .dropdown-content,
+.dropdown.show .dropdown-content {
     display: block;
     animation: fadeInCentered 0.2s ease-out;
 }
