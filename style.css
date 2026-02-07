@@ -249,6 +249,17 @@ nav {
     aspect-ratio: 210/297;
     /* A4 Ratio */
     height: auto;
+    min-height: 500px;
+    /* Ensure visibility on mobile */
+}
+
+@media screen and (max-width: 768px) {
+    .pdf-container {
+        height: 80vh;
+        /* Maximize height on mobile */
+        aspect-ratio: auto;
+        /* Allow height to override ratio */
+    }
 }
 
 .pdf-container iframe {
