@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const overlay = document.createElement('div');
             overlay.className = 'gallery-overlay';
-            overlay.textContent = 'Galéria Megtekintése';
+            overlay.textContent = 'Galéria';
 
             entryDiv.appendChild(coverImg);
             entryDiv.appendChild(overlay);
