@@ -203,9 +203,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const resultsContainer = document.getElementById('results-container');
     const resultsList = document.getElementById('results-list');
     const finalScoreEl = document.getElementById('final-score');
+    const restartQuizBtn = document.getElementById('restart-quiz-btn');
 
     if (startQuizBtn) {
         startQuizBtn.addEventListener('click', startQuiz);
+    }
+
+    if (restartQuizBtn) {
+        restartQuizBtn.addEventListener('click', startQuiz);
     }
 
     async function startQuiz() {
