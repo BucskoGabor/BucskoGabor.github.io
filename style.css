@@ -425,8 +425,10 @@ dialog::backdrop {
 }
 
 .fb-link {
-    display: inline-block;
-    margin-top: 1rem;
+    display: table;
+    /* or block with width fit-content */
+    margin: 1rem auto 0 auto;
+    /* Center horizontally */
     padding: 0.8rem 1.5rem;
     background-color: #1877f2;
     color: white;
