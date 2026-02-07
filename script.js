@@ -299,6 +299,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderOptions(q, optionsAreImages) {
         quizOptions.innerHTML = ''; // Clear previous
+        quizOptions.style.display = ''; // Reset inline style
+        quizOptions.className = 'options-grid'; // Apply grid class for regular questions
 
         // Special Case: Question 187 (or any with bad_answers_images)
         if (q.bad_answers_images && q.bad_answers_images.length > 0) {
@@ -357,6 +359,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function renderMultiPartOptions(q) {
         multiPartSelection = { text: null, image: null };
+
+        // Reset container styles to avoid grid conflicts from previous regular questions
+        quizOptions.className = '';
+        quizOptions.style.display = 'block';
 
         // Main container for the split view
         const splitContainer = document.createElement('div');
@@ -519,17 +525,40 @@ document.addEventListener('DOMContentLoaded', () => {
             let userAnswerDisplay = item.userAnswer;
             let correctAnswerDisplay = item.correctAnswer;
 
-            // Simple check for image path in display text
-            // ONLY if it looks like a pure image path
-            if (userAnswerDisplay && !userAnswerDisplay.startsWith('Szöveg:') && (userAnswerDisplay.trim().startsWith('images/') || userAnswerDisplay.toLowerCase().endsWith('.png'))) {
-                userAnswerDisplay = `<img src="${userAnswerDisplay}" style="height: 50px; vertical-align: middle;">`;
-            }
-            if (correctAnswerDisplay && !correctAnswerDisplay.startsWith('Szöveg:') && (correctAnswerDisplay.trim().startsWith('images/') || correctAnswerDisplay.toLowerCase().endsWith('.png'))) {
-                correctAnswerDisplay = `<img src="${correctAnswerDisplay}" style="height: 50px; vertical-align: middle;">`;
+            // Helper to format multipart answer
+            const formatMultipart = (str) => {
+                if (str && str.startsWith('Szöveg:') && str.includes('| Kép:')) {
+                    const parts = str.split('| Kép:');
+                    const textPart = parts[0].trim();
+                    const imgPart = parts[1].trim();
+
+                    // Check if imgPart is a path or just "kiválasztva"
+                    let imgHtml = imgPart;
+                    if (imgPart.includes('images/') || imgPart.toLowerCase().endsWith('.png') || imgPart.toLowerCase().endsWith('.jpg')) {
+                        imgHtml = `<img src="${imgPart}" style="height: 50px; vertical-align: middle;">`;
+                    }
+                    return `<div>${textPart}</div><div>Kép: ${imgHtml}</div>`;
+                }
+                return null;
+            };
+
+            // 1. Try to format as multipart
+            const userMulti = formatMultipart(userAnswerDisplay);
+            if (userMulti) userAnswerDisplay = userMulti;
+            else {
+                // 2. Fallback: Simple check for image path in display text
+                if (userAnswerDisplay && !userAnswerDisplay.startsWith('Szöveg:') && (userAnswerDisplay.trim().startsWith('images/') || userAnswerDisplay.toLowerCase().endsWith('.png'))) {
+                    userAnswerDisplay = `<img src="${userAnswerDisplay}" style="height: 50px; vertical-align: middle;">`;
+                }
             }
 
-            // Special handling for Multi-part display to make it pretty? 
-            // If starts with Szöveg, maybe formatting? For now, plain text is better than broken image.
+            const correctMulti = formatMultipart(correctAnswerDisplay);
+            if (correctMulti) correctAnswerDisplay = correctMulti;
+            else {
+                if (correctAnswerDisplay && !correctAnswerDisplay.startsWith('Szöveg:') && (correctAnswerDisplay.trim().startsWith('images/') || correctAnswerDisplay.toLowerCase().endsWith('.png'))) {
+                    correctAnswerDisplay = `<img src="${correctAnswerDisplay}" style="height: 50px; vertical-align: middle;">`;
+                }
+            }
 
 
             const pointsDisplay = item.earned > 0 ? `<span class="text-success">✔ (+${item.earned} pont)</span>` : '<span class="text-danger">✘ (0 pont)</span>';
