@@ -670,6 +670,29 @@ dialog::backdrop {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+/* Specific Styles for General Gallery (No Blur, 3 Columns) */
+#general-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+#general-gallery-grid .gallery-entry img {
+    filter: none;
+}
+
+#general-gallery-grid .gallery-entry:hover img {
+    filter: none;
+    transform: scale(1.05);
+    /* Slight zoom on hover instead of blur change */
+}
+
+@media screen and (max-width: 768px) {
+    #general-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Lightbox Styles */
 .lightbox-dialog {
     width: 100vw;
