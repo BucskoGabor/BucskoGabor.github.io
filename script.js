@@ -283,11 +283,14 @@ document.addEventListener('DOMContentLoaded', () => {
         let options = [];
         // Add Correct Answer
         if (optionsAreImages) {
-            // For image questions, correct answer is in q.image (usually) or q.answer if it refers to an image path?
-            // In JSON: "answer": "Lásd a képet.", "image": "path/to/img.png".
-            // So if options are images, the correct option is q.image.
+            // If the expected answers are images, we need to find the correct image path.
+            // For "Drawing" tasks, q.answer is usually "Lásd a képet." and q.image contains the correct image.
             if (q.image) {
                 options.push({ text: q.image, isCorrect: true, isImage: true });
+            } else {
+                // Fallback if no image property but it's supposed to be an image answer
+                console.error("Missing image property for question:", q.question);
+                options.push({ text: "Hiányzó kép", isCorrect: true, isImage: false });
             }
         } else {
             options.push({ text: q.answer, isCorrect: true, isImage: false });
@@ -314,6 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (opt.isImage) {
                 const img = document.createElement('img');
                 img.src = opt.text;
+                img.setAttribute('alt', 'Válaszlehetőség');
                 img.className = 'quiz-option-img';
                 btn.appendChild(img);
             } else {

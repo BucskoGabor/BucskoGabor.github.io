@@ -283,6 +283,7 @@
     "id": 29,
     "question": "Rajzolja meg a kezdő cereviszfigurát (1 pont)",
     "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_29.png",
     "bad_answers": [
       "images/quiz/quiz_image_131.png",
       "images/quiz/quiz_image_135.png",
@@ -1301,6 +1302,7 @@
     "id": 131,
     "question": "Rajzolj egy Nagy Schmollist. (1 pont)",
     "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_131.png",
     "bad_answers": [
       "images/quiz/quiz_image_29.png",
       "images/quiz/quiz_image_132.png",
@@ -1311,6 +1313,7 @@
     "id": 132,
     "question": "Rajzolj egy Kis Schmollist. (1 pont)",
     "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_132.png",
     "bad_answers": [
       "images/quiz/quiz_image_131.png",
       "images/quiz/quiz_image_137.png",
@@ -1321,6 +1324,7 @@
     "id": 133,
     "question": "Rajzol egy P... (1 pont)",
     "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_133.png",
     "bad_answers": [
       "images/quiz/quiz_image_131.png",
       "images/quiz/quiz_image_144.png",
@@ -1341,6 +1345,7 @@
     "id": 135,
     "question": "Rajzolj egy akasztófát (1 pont)",
     "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_135.png",
     "bad_answers": [
       "images/quiz/quiz_image_29.png",
       "images/quiz/quiz_image_137.png",
@@ -1361,6 +1366,7 @@
     "id": 137,
     "question": "Rajzolj egy Létrát. (1 pont)",
     "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_137.png",
     "bad_answers": [
       "images/quiz/quiz_image_135.png",
       "images/quiz/quiz_image_139.png",
@@ -1381,6 +1387,7 @@
     "id": 139,
     "question": "Rajzolj egy Szabó figurát. (1 pont)",
     "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_139.png",
     "bad_answers": [
       "images/quiz/quiz_image_137.png",
       "images/quiz/quiz_image_144.png",
@@ -1431,6 +1438,7 @@
     "id": 144,
     "question": "Rajzoljon le egy verést. (1 pont)",
     "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_144.png",
     "bad_answers": [
       "images/quiz/quiz_image_133.png",
       "images/quiz/quiz_image_137.png",
@@ -1441,6 +1449,7 @@
     "id": 145,
     "question": "Rajzoljon le egy Ásót. (1 pont)",
     "answer": "Lásd a képet.",
+    "image": "images/quiz/quiz_image_145.png",
     "bad_answers": [
       "images/quiz/quiz_image_133.png",
       "images/quiz/quiz_image_139.png",
@@ -1861,6 +1870,7 @@
     "id": 187,
     "question": "Mi a cerevis játék vége? (mit kell tenni, illetve rajzolni) (2 pont)",
     "answer": "A kiürített Cereviskorsókat mindenki a saját mezőjébe fejjel lefelé lerakja, majd az utolsó ásó hegyétől kezdve, balról jobbra haladva, egy zárt hurkot kell rajzolni.",
+    "image": "images/quiz/quiz_image_187.png",
     "bad_answers": [
       "images/quiz/quiz_image_29.png",
       "images/quiz/quiz_image_131.png",
