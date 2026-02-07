@@ -1,17 +1,17 @@
 /* Global Styles */
 :root {
-    --bg-color: #f8fafc;
-    --text-primary: #1e293b;
+    --bg-color: #ffffff;
+    --text-primary: #0f172a;
     --text-secondary: #475569;
-    --accent-color: #6366f1;
-    --accent-glow: #4f46e5;
+    --accent-color: #334155;
+    --accent-glow: #64748b;
     --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-border: rgba(0, 0, 0, 0.1);
     --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-    --card-hover-bg: rgba(255, 255, 255, 0.9);
+    --card-hover-bg: rgba(248, 250, 252, 0.9);
     --font-family: 'Outfit', sans-serif;
-    --nav-active-bg: rgba(99, 102, 241, 0.1);
-    --nav-active-text: #4f46e5;
+    --nav-active-bg: rgba(0, 0, 0, 0.05);
+    --nav-active-text: #0f172a;
 }
 
 * {
@@ -53,7 +53,7 @@ body {
 .globe-1 {
     width: 400px;
     height: 400px;
-    background: #4f46e5;
+    background: #e2e8f0;
     top: -100px;
     left: -100px;
 }
@@ -61,7 +61,7 @@ body {
 .globe-2 {
     width: 500px;
     height: 500px;
-    background: #ec4899;
+    background: #cbd5e1;
     bottom: -150px;
     right: -100px;
     animation-delay: -2s;
@@ -70,7 +70,7 @@ body {
 .globe-3 {
     width: 300px;
     height: 300px;
-    background: #06b6d4;
+    background: #94a3b8;
     top: 40%;
     left: 40%;
     animation-delay: -4s;
@@ -118,8 +118,8 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--accent-glow);
-    background: linear-gradient(135deg, #1e293b, #4f46e5);
+    color: var(--text-primary);
+    background: linear-gradient(135deg, #0f172a, #475569);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -152,7 +152,7 @@ nav {
 .nav-btn.active {
     background: var(--nav-active-bg);
     color: var(--nav-active-text);
-    border-color: rgba(99, 102, 241, 0.2);
+    border-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Main Content */
@@ -223,7 +223,7 @@ nav {
 .about-card h1 {
     font-size: 3rem;
     margin-bottom: 1.5rem;
-    background: linear-gradient(to right, #4f46e5, #0ea5e9);
+    background: linear-gradient(to right, #0f172a, #64748b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -438,7 +438,7 @@ dialog::backdrop {
     margin: 1rem auto 0 auto;
     /* Center horizontally */
     padding: 0.8rem 1.5rem;
-    background-color: #1877f2;
+    background-color: #0f172a;
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -447,7 +447,7 @@ dialog::backdrop {
 }
 
 .fb-link:hover {
-    background-color: #166fe5;
+    background-color: #334155;
 }
 
 .dialog-content hr {
