@@ -21,7 +21,7 @@
         {
             "id": 3,
             "name": "Gyöngyösi Dóra Imola",
-            "role": "Sauf commissarium",
+            "role": "Saufcomissarium",
             "image": "https://placehold.co/400x400/ec4899/ffffff?text=GyD"
         },
         {
@@ -107,5 +107,13 @@
                 "https://placehold.co/600x400/64748b/ffffff?text=Teszt+Kep+3"
             ]
         }
+    ],
+    "gallery": [
+        "https://placehold.co/600x400/1e293b/ffffff?text=Tarsasag+Elet+1",
+        "https://placehold.co/600x400/334155/ffffff?text=Tarsasag+Elet+2",
+        "https://placehold.co/600x400/475569/ffffff?text=Tarsasag+Elet+3",
+        "https://placehold.co/600x400/64748b/ffffff?text=Tarsasag+Elet+4",
+        "https://placehold.co/600x400/94a3b8/ffffff?text=Tarsasag+Elet+5",
+        "https://placehold.co/600x400/cbd5e1/ffffff?text=Tarsasag+Elet+6"
     ]
 }
