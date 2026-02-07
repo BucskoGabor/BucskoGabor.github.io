@@ -128,11 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (company.social.email) {
                 socialLinks.push(`
-                    <a href="mailto:${company.social.email}" class="social-icon" title="Email">
+                    <div class="social-icon email-container" title="Kattints az email megjelenítéséhez" onclick="this.classList.toggle('expanded')">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                            <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
                         </svg>
-                    </a>
+                        <span class="email-text">${company.social.email}</span>
+                    </div>
                 `);
             }
 
@@ -217,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function startQuiz() {
         try {
-            const response = await fetch('quiz_data.json');
+            const response = await fetch('/documents/cerevis-kviz/quiz_data.json');
             quizQuestions = await response.json();
 
             // Randomize order (Fisher-Yates shuffle)

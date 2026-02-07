@@ -444,6 +444,75 @@ nav {
     height: 24px;
 }
 
+/* Toggleable Email Button Styles */
+.email-container {
+    cursor: pointer;
+    overflow: hidden;
+    width: 48px;
+    /* Start as circle */
+    border-radius: 24px;
+    /* Ensure pill shape capability */
+    transition: width 0.4s ease, background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+    justify-content: flex-start;
+    /* Align icon to left when expanded */
+    padding-left: 11px;
+    /* Center icon (48px width -> 12px padding roughly, adjusted for border) */
+    /* actually, let's keep justify-center and use padding trick or absolute icon? */
+    /* Better approach for smooth expansion: flex container */
+    position: relative;
+    padding: 0;
+}
+
+/* Reset padding and justification for the icon to stay centered when closed */
+.email-container {
+    justify-content: flex-start;
+    padding-left: 0;
+}
+
+/* Center the icon visually in the closed state */
+.email-container svg {
+    min-width: 24px;
+    margin-left: 11px;
+    /* (48 - 24 - 2(border)) / 2 = 11px */
+    margin-right: 11px;
+}
+
+.email-text {
+    opacity: 0;
+    max-width: 0;
+    pointer-events: none;
+    /* Prevent selecting hidden text */
+    transition: opacity 0.3s ease 0.1s, max-width 0.4s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.email-container.expanded {
+    width: auto;
+    /* Allow auto width */
+    min-width: 250px;
+    /* Min width for typical email */
+    padding-right: 1rem;
+    /* Space at end */
+    background: var(--text-primary);
+    color: white;
+    border-color: transparent;
+}
+
+.email-container.expanded .email-text {
+    opacity: 1;
+    max-width: 300px;
+    /* Arbitrary large limit */
+    pointer-events: auto;
+    margin-left: 0.5rem;
+}
+
+.email-container.expanded:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
 /* Members Grid */
 .members-grid {
     display: grid;
