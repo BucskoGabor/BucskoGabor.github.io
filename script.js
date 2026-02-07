@@ -163,6 +163,29 @@ document.addEventListener('DOMContentLoaded', () => {
             dialogFbLink.style.display = 'none';
         }
 
+        // Gallery Handling
+        const galleryContainer = document.getElementById('dialog-gallery');
+        galleryContainer.innerHTML = ''; // Clear previous gallery
+
+        if (event.gallery && event.gallery.length > 0) {
+            galleryContainer.style.display = 'grid';
+            event.gallery.forEach(imgUrl => {
+                const img = document.createElement('img');
+                img.src = imgUrl;
+                img.alt = `Galéria kép - ${event.name}`;
+                img.className = 'gallery-img';
+
+                // Simple View on Click (could be enhanced to a lightbox later)
+                img.addEventListener('click', () => {
+                    window.open(imgUrl, '_blank');
+                });
+
+                galleryContainer.appendChild(img);
+            });
+        } else {
+            galleryContainer.style.display = 'none';
+        }
+
         dialog.showModal();
 
         // Close when clicking outside content (backdrop)
