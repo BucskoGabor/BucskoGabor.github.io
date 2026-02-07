@@ -182,57 +182,59 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Ulti", type: "Kártyajáték", description: "Népszerű magyar kártyajáték, rablóulti és talonmáriás változatokkal." }
     ];
 
-    // Quiz Logic
+    // Quiz Variables
     let quizQuestions = [];
+    let currentQuizSet = [];
     let currentQuestionIndex = 0;
     let score = 0;
+    let maxScore = 0;
+    let userAnswers = []; // Store {question, userAnswer, correctAnswer, isCorrect, points}
 
+    // DOM Elements - Quiz
     const startQuizBtn = document.getElementById('start-quiz-btn');
     const quizContainer = document.getElementById('quiz-container');
-    const revealBtn = document.getElementById('reveal-btn');
-    const answerSection = document.getElementById('answer-section');
-    const btnCorrect = document.getElementById('btn-correct');
-    const btnIncorrect = document.getElementById('btn-incorrect');
     const questionText = document.getElementById('question-text');
     const questionImage = document.getElementById('question-image');
-    const answerText = document.getElementById('answer-text');
-    const answerImage = document.getElementById('answer-image');
+    const quizOptions = document.getElementById('quiz-options');
     const progressEl = document.getElementById('quiz-progress');
     const scoreEl = document.getElementById('quiz-score');
+
+    // DOM Elements - Results
+    const resultsContainer = document.getElementById('results-container');
+    const resultsList = document.getElementById('results-list');
+    const finalScoreEl = document.getElementById('final-score');
 
     if (startQuizBtn) {
         startQuizBtn.addEventListener('click', startQuiz);
     }
 
-    if (revealBtn) {
-        revealBtn.addEventListener('click', showAnswer);
-    }
-
-    if (btnCorrect) {
-        btnCorrect.addEventListener('click', () => handleRating(true));
-    }
-
-    if (btnIncorrect) {
-        btnIncorrect.addEventListener('click', () => handleRating(false));
-    }
-
     async function startQuiz() {
         try {
-            const response = await fetch('/documents/cerevis-kviz/quiz_data.json');
-            quizQuestions = await response.json();
+            const response = await fetch('documents/cerevis-kviz/quiz_data.json');
+            const allQuestions = await response.json();
 
-            // Randomize order (Fisher-Yates shuffle)
-            for (let i = quizQuestions.length - 1; i > 0; i--) {
+            // Randomize and select 30
+            // Fisher-Yates shuffle
+            for (let i = allQuestions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
-                [quizQuestions[i], quizQuestions[j]] = [quizQuestions[j], quizQuestions[i]];
+                [allQuestions[i], allQuestions[j]] = [allQuestions[j], allQuestions[i]];
             }
+            currentQuizSet = allQuestions.slice(0, 30);
 
+            // Reset State
             currentQuestionIndex = 0;
             score = 0;
-            scoreEl.textContent = `Helyes válaszok száma: 0`;
+            userAnswers = [];
 
-            startQuizBtn.classList.add('hidden');
+            // Calculate Max Score
+            maxScore = currentQuizSet.reduce((total, q) => total + getPoints(q.question), 0);
+
+            scoreEl.textContent = `Pontszám: 0 / ${maxScore}`;
+
+            // UI Updates
+            startQuizBtn.parentElement.classList.add('hidden'); // Hide start button container
             quizContainer.classList.remove('hidden');
+            resultsContainer.classList.add('hidden');
 
             loadQuestion();
         } catch (error) {
@@ -241,85 +243,150 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function getPoints(questionString) {
+        const match = questionString.match(/\((\d+)\s*pont/i);
+        return match ? parseInt(match[1]) : 1;
+    }
+
     function loadQuestion() {
-        const q = quizQuestions[currentQuestionIndex];
+        const q = currentQuizSet[currentQuestionIndex];
+        const points = getPoints(q.question);
 
         // Update Progress
-        progressEl.textContent = `Kérdés: ${currentQuestionIndex + 1}/${quizQuestions.length}`;
+        progressEl.textContent = `Kérdés: ${currentQuestionIndex + 1} / ${currentQuizSet.length} (${points} pont)`;
 
-        // Set Content
+        // Set Question Text
         questionText.textContent = q.question;
 
-        // Handle Question Image
-        // Note: Logic allows for image in question OR answer. 
-        // Based on data, image is mostly in answer for "Drawing" tasks, but we support both.
-        // If the question explicitly asks to draw, we usually show the image as the ANSWER.
-        // If the question is "What is this?", we show image as QUESTION.
-        // Current JSON structure puts image in `image` field.
-        // Heuristic: If question contains "látható" (visible), show image now. 
-        // If question contains "Rajzolj" (Draw), show image in answer.
+        // Handle Image
+        // If question has image AND it is NOT a "draw this" task (which uses image as answer option), show it.
+        // Heuristic: If we have bad_answers that are images, then the MAIN image is likely the correct answer option, NOT the question illustration.
+        // However, some questions might be "What is in this picture?".
+        // Based on data: "Rajzolj..." questions have image as answer. "Mit jelent..." might have illustration.
+        // Let's check if bad_answers look like images.
+        const optionsAreImages = q.bad_answers && q.bad_answers.some(ans => ans.includes('/') || ans.toLowerCase().endsWith('.png'));
 
-        const isDrawingTask = q.question.toLowerCase().includes('rajzol');
-
-        if (q.image && !isDrawingTask) {
+        if (q.image && !optionsAreImages) {
             questionImage.src = q.image;
             questionImage.classList.remove('hidden');
         } else {
             questionImage.classList.add('hidden');
         }
 
-        // Reset UI
-        answerSection.classList.add('hidden');
-        revealBtn.classList.remove('hidden');
-
-        // Prepare Answer Image (hidden for now)
-        if (q.image && isDrawingTask) {
-            answerImage.src = q.image;
-            // It will be shown in showAnswer
-        } else {
-            answerImage.src = ""; // Clear
-        }
+        // Generate Options
+        renderOptions(q, optionsAreImages);
     }
 
-    function showAnswer() {
-        const q = quizQuestions[currentQuestionIndex];
+    function renderOptions(q, optionsAreImages) {
+        quizOptions.innerHTML = ''; // Clear previous
 
-        answerText.textContent = q.answer;
-
-        const isDrawingTask = q.question.toLowerCase().includes('rajzol');
-        if (q.image && isDrawingTask) {
-            answerImage.classList.remove('hidden');
+        let options = [];
+        // Add Correct Answer
+        if (optionsAreImages) {
+            // For image questions, correct answer is in q.image (usually) or q.answer if it refers to an image path?
+            // In JSON: "answer": "Lásd a képet.", "image": "path/to/img.png".
+            // So if options are images, the correct option is q.image.
+            if (q.image) {
+                options.push({ text: q.image, isCorrect: true, isImage: true });
+            }
         } else {
-            answerImage.classList.add('hidden');
+            options.push({ text: q.answer, isCorrect: true, isImage: false });
         }
 
-        revealBtn.classList.add('hidden');
-        answerSection.classList.remove('hidden');
+        // Add Bad Answers
+        if (q.bad_answers) {
+            q.bad_answers.forEach(bad => {
+                options.push({ text: bad, isCorrect: false, isImage: optionsAreImages });
+            });
+        }
+
+        // Shuffle Options
+        for (let i = options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [options[i], options[j]] = [options[j], options[i]];
+        }
+
+        // Render Buttons
+        options.forEach(opt => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option-btn';
+
+            if (opt.isImage) {
+                const img = document.createElement('img');
+                img.src = opt.text;
+                img.className = 'quiz-option-img';
+                btn.appendChild(img);
+            } else {
+                btn.textContent = opt.text;
+            }
+
+            btn.onclick = () => handleAnswer(opt.isCorrect, opt.text);
+            quizOptions.appendChild(btn);
+        });
     }
 
-    function handleRating(correct) {
-        if (correct) {
-            score++;
-            scoreEl.textContent = `Helyes válaszok száma: ${score}`;
+    function handleAnswer(isCorrect, userAnswerText) {
+        const q = currentQuizSet[currentQuestionIndex];
+        const points = getPoints(q.question);
+
+        // Update Score
+        if (isCorrect) {
+            score += points;
         }
 
+        // Log Result
+        userAnswers.push({
+            question: q.question,
+            userAnswer: userAnswerText,
+            correctAnswer: (q.answer === "Lásd a képet." && q.image) ? q.image : q.answer,
+            isCorrect: isCorrect,
+            points: points,
+            earned: isCorrect ? points : 0
+        });
+
+        scoreEl.textContent = `Pontszám: ${score} / ${maxScore}`;
+
+        // Next Question
         currentQuestionIndex++;
-
-        if (currentQuestionIndex < quizQuestions.length) {
+        if (currentQuestionIndex < currentQuizSet.length) {
             loadQuestion();
         } else {
-            finishQuiz();
+            showResults();
         }
     }
 
-    function finishQuiz() {
-        quizContainer.innerHTML = `
-            <div style="text-align: center;">
-                <h3>Kvíz vége!</h3>
-                <p style="font-size: 1.2rem; margin: 1rem 0;">Helyes válaszok száma: ${score} / ${quizQuestions.length}</p>
-                <button onclick="location.reload()" class="nav-btn">Újra</button>
-            </div>
-        `;
+    function showResults() {
+        quizContainer.classList.add('hidden');
+        resultsContainer.classList.remove('hidden');
+
+        finalScoreEl.textContent = `Végeredmény: ${score} / ${maxScore} pont`;
+        resultsList.innerHTML = '';
+
+        userAnswers.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.className = `result-item ${item.isCorrect ? 'correct' : 'incorrect'}`;
+
+            let userAnswerDisplay = item.userAnswer;
+            let correctAnswerDisplay = item.correctAnswer;
+
+            // Handle Image paths in summary
+            if (userAnswerDisplay && (userAnswerDisplay.includes('/') || userAnswerDisplay.toLowerCase().endsWith('.png'))) {
+                userAnswerDisplay = `<img src="${userAnswerDisplay}" style="height: 50px; vertical-align: middle;">`;
+            }
+            if (correctAnswerDisplay && (correctAnswerDisplay.includes('/') || correctAnswerDisplay.toLowerCase().endsWith('.png'))) {
+                correctAnswerDisplay = `<img src="${correctAnswerDisplay}" style="height: 50px; vertical-align: middle;">`;
+            }
+
+            div.innerHTML = `
+                <div class="result-question">${index + 1}. ${item.question}</div>
+                <div class="result-detail">
+                    Válaszod: <strong>${userAnswerDisplay}</strong> 
+                    ${item.isCorrect ? '<span class="text-success">✔ (+' + item.points + ' pont)</span>' : '<span class="text-danger">✘ (0 pont)</span>'}
+                </div>
+                ${!item.isCorrect ? `<div class="result-detail">Helyes válasz: <strong class="text-success">${correctAnswerDisplay}</strong></div>` : ''}
+            `;
+            resultsList.appendChild(div);
+        });
     }
 
     function renderEventList(eventsList, container, emptyMsg) {

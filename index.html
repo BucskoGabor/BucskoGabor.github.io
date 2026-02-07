@@ -78,33 +78,36 @@
             </div>
 
             <div id="quiz-container" class="glass-card hidden"
-                style="margin-top: 2rem; margin-bottom: 2rem; padding: 2rem;">
-                <div class="quiz-header">
-                    <span id="quiz-progress">Kérdés: 0/0</span>
-                    <span id="quiz-score">Helyes válaszok száma: 0</span>
+                style="max-width: 800px; margin: 0 auto; padding: 2rem; position: relative;">
+                <div class="quiz-header"
+                    style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 2rem;">
+                    <h2 id="question-text" style="flex: 1; margin-right: 1rem; font-size: 1.5rem;">Kérdés...</h2>
+                    <div id="quiz-score" style="font-weight: bold; white-space: nowrap;">Pontszám: 0</div>
                 </div>
 
-                <div class="question-card">
-                    <h3 id="question-text">Kérdés helye...</h3>
-                    <img id="question-image" src="" alt="Question Image" class="hidden"
-                        style="max-width: 100%; border-radius: 8px; margin-top: 1rem;">
-                </div>
+                <div class="quiz-content" style="text-align: center; margin-bottom: 2rem;">
+                    <img id="question-image" src="" alt="Kérdéshez tartozó kép"
+                        style="max-width: 100%; max-height: 300px; border-radius: 8px; margin-bottom: 1rem;"
+                        class="hidden">
 
-                <div id="answer-section" class="hidden"
-                    style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--glass-border);">
-                    <h4>Helyes válasz:</h4>
-                    <p id="answer-text" style="font-weight: bold; white-space: pre-wrap;">Válasz helye...</p>
-                    <img id="answer-image" src="" alt="Answer Image" class="hidden"
-                        style="max-width: 100%; border-radius: 8px; margin-top: 1rem;">
-
-                    <div class="rating-buttons"
-                        style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
-                        <button id="btn-correct" class="btn-success">Tudtam (+1)</button>
-                        <button id="btn-incorrect" class="btn-danger">Nem tudtam (0)</button>
+                    <div id="quiz-options" class="options-grid">
+                        <!-- Options will be generated here -->
                     </div>
                 </div>
 
-                <button id="reveal-btn" class="nav-btn" style="margin-top: 1.5rem;">Válasz mutatása</button>
+                <div id="quiz-progress" style="text-align: center; font-size: 0.9rem; opacity: 0.8;">Kérdés: 1/X</div>
+            </div>
+
+            <div id="results-container" class="glass-card hidden"
+                style="max-width: 800px; margin: 2rem auto; padding: 2rem;">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Eredmények</h2>
+                <div id="results-list" class="results-list" style="margin-bottom: 2rem;">
+                    <!-- Results will be generated here -->
+                </div>
+                <div style="text-align: center;">
+                    <div id="final-score" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;"></div>
+                    <button class="nav-btn" onclick="location.reload()">Újra</button>
+                </div>
             </div>
 
             <div style="text-align: center; margin-bottom: 2rem;">
