@@ -71,6 +71,16 @@
             "description": "Mi, a Társas Társaság Asztal Társaság úgy határozánk, hogy elérkezett az idő a Társaság és szimpatizánsai alkoholtűrő képességének próbatételére. E jeles alkalmat az Egy mindenkiért, mindenki egyért Nedvesest hivatott megkoronázni.",
             "facebookLink": "https://www.facebook.com/events/757029017449841",
             "visibility": "private"
+        },
+        {
+            "id": 2,
+            "name": "TTAT Komolyest",
+            "date": "2026-01-18",
+            "time": "18:00",
+            "location": "Miskolci Egyetem, E/3 20-as pince",
+            "description": "Társaság jövőét megbeszélő estje.",
+            "facebookLink": "",
+            "visibility": "private"
         }
     ]
 }
