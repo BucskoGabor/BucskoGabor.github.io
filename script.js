@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             currentQuestionIndex = 0;
             score = 0;
-            scoreEl.textContent = `Pontszám: 0`;
+            scoreEl.textContent = `Helyes válaszok száma: 0`;
 
             startQuizBtn.classList.add('hidden');
             quizContainer.classList.remove('hidden');
@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleRating(correct) {
         if (correct) {
             score++;
-            scoreEl.textContent = `Pontszám: ${score}`;
+            scoreEl.textContent = `Helyes válaszok száma: ${score}`;
         }
 
         currentQuestionIndex++;
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
         quizContainer.innerHTML = `
             <div style="text-align: center;">
                 <h3>Kvíz vége!</h3>
-                <p style="font-size: 1.2rem; margin: 1rem 0;">Eredményed: ${score} / ${quizQuestions.length}</p>
+                <p style="font-size: 1.2rem; margin: 1rem 0;">Helyes válaszok száma: ${score} / ${quizQuestions.length}</p>
                 <button onclick="location.reload()" class="nav-btn">Újra</button>
             </div>
         `;
