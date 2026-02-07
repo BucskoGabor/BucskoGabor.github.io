@@ -163,25 +163,38 @@ document.addEventListener('DOMContentLoaded', () => {
             dialogFbLink.style.display = 'none';
         }
 
-        // Gallery Handling
+        // Gallery Handling - Blurred Entry
         const galleryContainer = document.getElementById('dialog-gallery');
-        galleryContainer.innerHTML = ''; // Clear previous gallery
+        galleryContainer.innerHTML = ''; // Clear previous content
+
+        // Ensure container has correct class for singular entry
+        galleryContainer.className = 'gallery-container';
 
         if (event.gallery && event.gallery.length > 0) {
-            galleryContainer.style.display = 'grid';
-            event.gallery.forEach(imgUrl => {
-                const img = document.createElement('img');
-                img.src = imgUrl;
-                img.alt = `Galéria kép - ${event.name}`;
-                img.className = 'gallery-img';
+            galleryContainer.style.display = 'block';
 
-                // Simple View on Click (could be enhanced to a lightbox later)
-                img.addEventListener('click', () => {
-                    window.open(imgUrl, '_blank');
-                });
+            // Create the blurred entry point
+            const entryDiv = document.createElement('div');
+            entryDiv.className = 'gallery-entry';
 
-                galleryContainer.appendChild(img);
+            const coverImg = document.createElement('img');
+            coverImg.src = event.gallery[0];
+            coverImg.alt = 'Galéria borítókép';
+
+            const overlay = document.createElement('div');
+            overlay.className = 'gallery-overlay';
+            overlay.textContent = 'Galéria Megtekintése';
+
+            entryDiv.appendChild(coverImg);
+            entryDiv.appendChild(overlay);
+
+            // On click, open the lightbox with all images
+            entryDiv.addEventListener('click', () => {
+                openLightbox(0, event.gallery);
             });
+
+            galleryContainer.appendChild(entryDiv);
+
         } else {
             galleryContainer.style.display = 'none';
         }
@@ -206,6 +219,73 @@ document.addEventListener('DOMContentLoaded', () => {
     closeDialogBtn.addEventListener('click', () => {
         dialog.close();
         dialog.removeEventListener('click', backdropClickHandler);
+    });
+
+    // --- Lightbox Logic ---
+    const lightboxDialog = document.getElementById('lightbox-dialog');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeLightboxBtn = document.getElementById('close-lightbox');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    let currentGalleryImages = [];
+    let currentImageIndex = 0;
+
+    function openLightbox(index, images) {
+        currentGalleryImages = images;
+        currentImageIndex = index;
+        updateLightboxImage();
+        lightboxDialog.showModal();
+
+        // Close event dialog temporarily/stay open underneath? 
+        // HTML dialog API allows stacked modals. We'll keep event dialog open underneath.
+    }
+
+    function updateLightboxImage() {
+        if (currentGalleryImages.length > 0) {
+            lightboxImg.src = currentGalleryImages[currentImageIndex];
+        }
+    }
+
+    function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % currentGalleryImages.length;
+        updateLightboxImage();
+    }
+
+    function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + currentGalleryImages.length) % currentGalleryImages.length;
+        updateLightboxImage();
+    }
+
+    nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nextImage();
+    });
+
+    prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        prevImage();
+    });
+
+    closeLightboxBtn.addEventListener('click', () => {
+        lightboxDialog.close();
+    });
+
+    // Close lightbox on backdrop click
+    lightboxDialog.addEventListener('click', (e) => {
+        // If clicking on the backdrop (dialog itself)
+        if (e.target === lightboxDialog) {
+            lightboxDialog.close();
+        }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (lightboxDialog.open) {
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+            if (e.key === 'Escape') lightboxDialog.close();
+        }
     });
 
     // Utility: Simple Date Formatter
