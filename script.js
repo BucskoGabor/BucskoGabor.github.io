@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('active');
 
             // Show target section
+            const targetSection = document.getElementById(tabId);
             targetSection.classList.remove('hidden');
             targetSection.classList.add('active');
 
