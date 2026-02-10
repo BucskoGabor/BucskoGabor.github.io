@@ -710,6 +710,7 @@ nav {
 .member-info h3 {
     font-size: 1.25rem;
     margin-bottom: 0.25rem;
+    white-space: pre-line;
 }
 
 .member-role {
