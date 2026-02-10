@@ -13,55 +13,55 @@
     "members": [
         {
             "id": 1,
-            "name": "Dózsa Imre Márk\nvulgo a hangos konfidens game mester\navagy szóbelin kocsonya\nde azért szeretem az anime csöcsöket",
+            "name": "Dózsa Imre Márk vulgo a hangos konfidens\ngame mester avagy szóbelin kocsonya\nde azért szeretem az anime csöcsöket",
             "role": "Praeses",
             "image": "images/members/mark.png"
         },
         {
             "id": 2,
-            "name": "Lengyel János\nalias Az anyag lovas\navagy A Mercédeszek megszállotja",
+            "name": "Lengyel János alias Az anyag lovas\navagy A Mercédeszek megszállotja",
             "role": "Major Domus",
             "image": "images/members/janos.png"
         },
         {
             "id": 3,
-            "name": "Gyöngyösi Dóra Imola\nalias Empátia Overflow\navagy Cicákat simogatni KÖTELEZŐ(!!) rituálé",
+            "name": "Gyöngyösi Dóra Imola alias Empátia Overflow\navagy Cicákat simogatni KÖTELEZŐ(!!) rituálé",
             "role": "Saufcomissarium",
             "image": "https://placehold.co/400x400/ec4899/ffffff?text=GyD"
         },
         {
             "id": 4,
-            "name": "Marót Máté\nalias A króniKussch Krónikás\navagy a kód írás is csak egy boss fight,\nde Informatikusnak lenni?\nAz már csak extra skill!",
+            "name": "Marót Máté alias A króniKussch Krónikás\navagy a kód írás is csak egy boss fight,\nde Informatikusnak lenni?\nAz már csak extra skill!",
             "role": "Krónikás",
             "image": "https://placehold.co/400x400/8b5cf6/ffffff?text=MM"
         },
         {
             "id": 5,
-            "name": "Bucskó Gábor\nalias BackendÚr\navagy a Java még hátra van",
+            "name": "Bucskó Gábor alias BackendÚr\navagy a Java még hátra van",
             "role": "Tag",
             "image": "images/members/gabor.png"
         },
         {
             "id": 6,
-            "name": "Tasi Szabolcs\nalias Sörnyeteg\navagy csinálok még Paksból Chernobyl-t",
+            "name": "Tasi Szabolcs alias Sörnyeteg\navagy csinálok még Paksból Chernobyl-t",
             "role": "Tag",
             "image": "https://placehold.co/400x400/06b6d4/ffffff?text=TSz"
         },
         {
             "id": 7,
-            "name": "Laczik Péter\nalias Demens vagyok",
+            "name": "Laczik Péter alias Demens vagyok",
             "role": "Tag",
             "image": "https://placehold.co/400x400/84cc16/ffffff?text=LP"
         },
         {
             "id": 8,
-            "name": "Bodó Bendegúz\nvulgo KisBorász Petőfi\navagy hátulról is én vagyok az első",
+            "name": "Bodó Bendegúz vulgo KisBorász Petőfi\navagy hátulról is én vagyok az első",
             "role": "Tag",
             "image": "https://placehold.co/400x400/eab308/ffffff?text=BB"
         },
         {
             "id": 9,
-            "name": "Csákó Balázs\nalias Az önpusztító blackout nagymester avagy mindent az utolsó percben",
+            "name": "Csákó Balázs alias Az önpusztító blackout nagymester\navagy mindent az utolsó percben",
             "role": "Tag",
             "image": "https://placehold.co/400x400/f43f5e/ffffff?text=CsB"
         }
