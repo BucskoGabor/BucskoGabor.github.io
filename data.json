@@ -15,13 +15,13 @@
             "id": 1,
             "name": "Dózsa Imre Márk",
             "role": "Praeses",
-            "image": "https://placehold.co/400x400/4f46e5/ffffff?text=DM"
+            "image": "images/members/mark.png"
         },
         {
             "id": 2,
             "name": "Lengyel János",
             "role": "Major Domus",
-            "image": "https://placehold.co/400x400/0ea5e9/ffffff?text=LJ"
+            "image": "images/members/janos.png"
         },
         {
             "id": 3,
@@ -39,7 +39,7 @@
             "id": 5,
             "name": "Bucskó Gábor",
             "role": "Tag",
-            "image": "https://placehold.co/400x400/f97316/ffffff?text=BG"
+            "image": "images/members/gabor.png"
         },
         {
             "id": 6,
@@ -114,7 +114,7 @@
         }
     ],
     "gallery": [
-        "https://placehold.co/600x400/1e293b/ffffff?text=Tarsasag+Elet+1",
+        "images/gallery/banyaszmiklos.png",
         "https://placehold.co/600x400/334155/ffffff?text=Tarsasag+Elet+2",
         "https://placehold.co/600x400/475569/ffffff?text=Tarsasag+Elet+3",
         "https://placehold.co/600x400/64748b/ffffff?text=Tarsasag+Elet+4",
