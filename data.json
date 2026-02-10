@@ -19,31 +19,31 @@
         },
         {
             "id": 2,
-            "name": "Lengyel János\nalias Az anyag lovas avagy A Mercédeszek megszállotja",
+            "name": "Lengyel János\nalias Az anyag lovas\navagy A Mercédeszek megszállotja",
             "role": "Major Domus",
             "image": "images/members/janos.png"
         },
         {
             "id": 3,
-            "name": "Gyöngyösi Dóra Imola\nalias Empátia Overflow avagy Cicákat simogatni KÖTELEZŐ(!!) rituálé",
+            "name": "Gyöngyösi Dóra Imola\nalias Empátia Overflow\navagy Cicákat simogatni KÖTELEZŐ(!!) rituálé",
             "role": "Saufcomissarium",
             "image": "https://placehold.co/400x400/ec4899/ffffff?text=GyD"
         },
         {
             "id": 4,
-            "name": "Marót Máté\nalias A króniKussch Krónikás avagy a kód írás is csak egy boss fight,\nde Informatikusnak lenni?\nAz már csak extra skill!",
+            "name": "Marót Máté\nalias A króniKussch Krónikás\navagy a kód írás is csak egy boss fight,\nde Informatikusnak lenni?\nAz már csak extra skill!",
             "role": "Krónikás",
             "image": "https://placehold.co/400x400/8b5cf6/ffffff?text=MM"
         },
         {
             "id": 5,
-            "name": "Bucskó Gábor\nalias BackendÚr avagy a Java még hátra van",
+            "name": "Bucskó Gábor\nalias BackendÚr\navagy a Java még hátra van",
             "role": "Tag",
             "image": "images/members/gabor.png"
         },
         {
             "id": 6,
-            "name": "Tasi Szabolcs\nalias Sörnyeteg avagy csinálok még Paksból Chernobyl-t",
+            "name": "Tasi Szabolcs\nalias Sörnyeteg\navagy csinálok még Paksból Chernobyl-t",
             "role": "Tag",
             "image": "https://placehold.co/400x400/06b6d4/ffffff?text=TSz"
         },
@@ -55,7 +55,7 @@
         },
         {
             "id": 8,
-            "name": "Bodó Bendegúz\nvulgo KisBorász Petőfi avagy hátulról is én vagyok az első",
+            "name": "Bodó Bendegúz\nvulgo KisBorász Petőfi\navagy hátulról is én vagyok az első",
             "role": "Tag",
             "image": "https://placehold.co/400x400/eab308/ffffff?text=BB"
         },
