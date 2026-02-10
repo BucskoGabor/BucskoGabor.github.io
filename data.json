@@ -13,55 +13,55 @@
     "members": [
         {
             "id": 1,
-            "name": "Dózsa Imre Márk",
+            "name": "Dózsa Imre Márk\nvulgo a hangos konfidens game mester\navagy szóbelin kocsonya\nde azért szeretem az anime csöcsöket",
             "role": "Praeses",
             "image": "images/members/mark.png"
         },
         {
             "id": 2,
-            "name": "Lengyel János",
+            "name": "Lengyel János\nalias Az anyag lovas avagy A Mercédeszek megszállotja",
             "role": "Major Domus",
             "image": "images/members/janos.png"
         },
         {
             "id": 3,
-            "name": "Gyöngyösi Dóra Imola",
+            "name": "Gyöngyösi Dóra Imola\nalias Empátia Overflow avagy Cicákat simogatni KÖTELEZŐ(!!) rituálé",
             "role": "Saufcomissarium",
             "image": "https://placehold.co/400x400/ec4899/ffffff?text=GyD"
         },
         {
             "id": 4,
-            "name": "Marót Máté",
+            "name": "Marót Máté\nalias A króniKussch Krónikás avagy a kód írás is csak egy boss fight,\nde Informatikusnak lenni?\nAz már csak extra skill!",
             "role": "Krónikás",
             "image": "https://placehold.co/400x400/8b5cf6/ffffff?text=MM"
         },
         {
             "id": 5,
-            "name": "Bucskó Gábor",
+            "name": "Bucskó Gábor\nalias BackendÚr avagy a Java még hátra van",
             "role": "Tag",
             "image": "images/members/gabor.png"
         },
         {
             "id": 6,
-            "name": "Tasi Szabolcs",
+            "name": "Tasi Szabolcs\nalias Sörnyeteg avagy csinálok még Paksból Chernobyl-t",
             "role": "Tag",
             "image": "https://placehold.co/400x400/06b6d4/ffffff?text=TSz"
         },
         {
             "id": 7,
-            "name": "Laczik Péter",
+            "name": "Laczik Péter\nalias Demens vagyok",
             "role": "Tag",
             "image": "https://placehold.co/400x400/84cc16/ffffff?text=LP"
         },
         {
             "id": 8,
-            "name": "Bodó Bendegúz",
+            "name": "Bodó Bendegúz\nvulgo KisBorász Petőfi avagy hátulról is én vagyok az első",
             "role": "Tag",
             "image": "https://placehold.co/400x400/eab308/ffffff?text=BB"
         },
         {
             "id": 9,
-            "name": "Csákó Balázs",
+            "name": "Csákó Balázs\nalias Az önpusztító blackout nagymester avagy mindent az utolsó percben",
             "role": "Tag",
             "image": "https://placehold.co/400x400/f43f5e/ffffff?text=CsB"
         }
