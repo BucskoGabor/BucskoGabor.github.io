@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Handle Hash Navigation (Initial Load)
+    handleInitialHash();
+
     // DOM Elements
     const navButtons = document.querySelectorAll('.nav-btn, .dropdown-item');
     const sections = document.querySelectorAll('.section');
@@ -51,28 +54,65 @@ document.addEventListener('DOMContentLoaded', () => {
             const tabId = btn.getAttribute('data-tab');
             if (!tabId) return; // Ignore buttons that don't switch tabs (e.g. dropdown toggle)
 
-            // Remove active class from all buttons and sections
-            navButtons.forEach(b => b.classList.remove('active'));
-            document.querySelectorAll('.dropdown-item').forEach(b => b.classList.remove('active'));
-            sections.forEach(s => {
-                s.classList.remove('active');
-                s.classList.add('hidden'); // Helper class for display none
-            });
+            // Update URL hash without scrolling
+            history.pushState(null, null, `#${tabId}`);
 
-            // Activate clicked button
-            btn.classList.add('active');
-
-            // Show target section
-            const targetSection = document.getElementById(tabId);
-            targetSection.classList.remove('hidden');
-            targetSection.classList.add('active');
-
-            // Close dropdown by removing focus
-            btn.blur();
-            // Also remove 'show' class from all dropdowns
-            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('show'));
+            // Switch Tab
+            switchTab(tabId);
         });
     });
+
+    // Handle Browser Back/Forward
+    window.addEventListener('popstate', () => {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+            switchTab(hash);
+        } else {
+            // Default to 'about' if no hash
+            switchTab('about');
+        }
+    });
+
+    function switchTab(tabId) {
+        // Remove active class from all buttons and sections
+        navButtons.forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.dropdown-item').forEach(b => b.classList.remove('active'));
+        sections.forEach(s => {
+            s.classList.remove('active');
+            s.classList.add('hidden'); // Helper class for display none
+        });
+
+        // Activate button(s) - handle both main nav and dropdown items
+        const activeBtn = document.querySelector(`.nav-btn[data-tab="${tabId}"], .dropdown-item[data-tab="${tabId}"]`);
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+            // If it's a dropdown item, maybe highlight the parent dropdown button too?
+            const parentDropdown = activeBtn.closest('.dropdown');
+            if (parentDropdown) {
+                // Optional: Highlight parent dropdown
+            }
+        }
+
+        // Show target section
+        const targetSection = document.getElementById(tabId);
+        if (targetSection) {
+            targetSection.classList.remove('hidden');
+            targetSection.classList.add('active');
+        }
+
+        // Close dropdown by removing focus
+        if (activeBtn) activeBtn.blur();
+        // Also remove 'show' class from all dropdowns
+        document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('show'));
+    }
+
+    function handleInitialHash() {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+            // Wait a tick to ensure elements are ready if needed, currently straightforward
+            setTimeout(() => switchTab(hash), 0);
+        }
+    }
 
     // Dropdown Mobile Toggle
     const dropdownBtns = document.querySelectorAll('.dropdown-btn');
