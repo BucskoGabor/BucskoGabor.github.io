@@ -89,11 +89,11 @@
         },
         {
             "id": 3,
-            "name": "TTAT sütőgetés",
+            "name": "TTAT főzés",
             "date": "2026-03-06",
             "time": "12:00",
             "location": "Miskolci Egyetem, E/1 tűzrakóhely",
-            "description": "Társas Társaság Asztal Társaság sütőgetése. Ezen a nyiltkörű eseményen az a célunk, hogy megismertessük a társaságunkat több miskolczi diáktársunkkal, és persze jól érezzük magunkat. A sütőgetésen való részvételhez előzetes regisztráció szükséges.",
+            "description": "Társas Társaság Asztal Társaság főzése. Ezen a nyiltkörű eseményen az a célunk, hogy megismertessük a társaságunkat több miskolczi diáktársunkkal, és persze jól érezzük magunkat. A főzésen való részvételhez előzetes regisztráció szükséges.",
             "facebookLink": "",
             "visibility": "public"
         }
