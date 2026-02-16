@@ -98,6 +98,7 @@ body {
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
+    transform: translateZ(0);
 }
 
 /* Header & Nav */
@@ -728,7 +729,8 @@ nav {
 
 .events-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     min-width: 600px;
     /* Ensure table doesn't squish too much */
 }
