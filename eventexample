@@ -1,0 +1,15 @@
+{
+    "id": 4,
+    "name": "Teszt Esemény Galériával",
+    "date": "2025-12-01",
+    "time": "18:00",
+    "location": "Teszt Helyszín",
+    "description": "Ez egy teszt esemény a galéria funkció kipróbálására.",
+    "facebookLink": "https://fb.me/e/8LMxoTrTB",
+    "visibility": "public",
+    "gallery": [
+        "https://placehold.co/600x400/334155/ffffff?text=Teszt+Kep+1",
+        "https://placehold.co/600x400/475569/ffffff?text=Teszt+Kep+2",
+        "https://placehold.co/600x400/64748b/ffffff?text=Teszt+Kep+3"
+    ]
+}
