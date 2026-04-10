@@ -75,7 +75,7 @@
             "id": 11,
             "name": "Baranyai Benedek vulgo Lemegyek tangesbe\navagy követ az őz hee!!",
             "role": "Tag",
-            "image": "https://placehold.co/400x400/f43f5e/ffffff?text=BB"
+            "image": "images/members/beni.jpg"
         },
         {
             "id": 12,
@@ -120,6 +120,16 @@
             "description": "Jó Szerencsét! 2026.03.06-án megrendezésre kerül a Társas Társaság Asztal Társaság Ismerkedős Főzése az E/1 tűzrakónál, ahol egy jó hangulatú közös gulyásfőzés mellett lehetőség lesz megismerni a társaságot. Az esemény célja, hogy kötetlen, barátságos légkörben töltsünk el egy délutánt: beszélgessünk, nevessünk és természetesen együnk is.",
             "facebookLink": "https://fb.me/e/6NgDnKRbU",
             "visibility": "public"
+        },
+        {
+            "id": 4,
+            "name": "TTAT Szakestély",
+            "date": "2026-04-17",
+            "time": "",
+            "location": "",
+            "description": "",
+            "facebookLink": "",
+            "visibility": "private"
         }
     ],
     "gallery": [
