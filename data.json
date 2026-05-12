@@ -130,6 +130,26 @@
             "description": "",
             "facebookLink": "",
             "visibility": "private"
+        },
+        {
+            "id": 5,
+            "name": "Társas Társaság Asztal Társaság Komolyest",
+            "date": "2026-05-17",
+            "time": "",
+            "location": "",
+            "description": "",
+            "facebookLink": "",
+            "visibility": "private"
+        },
+        {
+            "id": 6,
+            "name": "Társas Társaság Asztal Társaság Selmecz kirándulás",
+            "date": "2026-08-28",
+            "time": "",
+            "location": "",
+            "description": "",
+            "facebookLink": "",
+            "visibility": "private"
         }
     ],
     "gallery": [
