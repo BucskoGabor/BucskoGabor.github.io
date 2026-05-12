@@ -103,7 +103,7 @@
         },
         {
             "id": 2,
-            "name": "Társas Társaság Asztal Társaság Komolyest",
+            "name": "TTAT Komolyest",
             "date": "2026-01-18",
             "time": "",
             "location": "",
@@ -113,7 +113,7 @@
         },
         {
             "id": 3,
-            "name": "Társas Társaság Asztal Társaság Ismerkedős Főzés",
+            "name": "TTAT Ismerkedős Főzés",
             "date": "2026-03-06",
             "time": "12:00",
             "location": "Miskolci Egyetem, E/1 tűzrakóhely",
@@ -133,7 +133,7 @@
         },
         {
             "id": 5,
-            "name": "Társas Társaság Asztal Társaság Komolyest",
+            "name": "TTAT Szárnybontogató Komolyest",
             "date": "2026-05-17",
             "time": "",
             "location": "",
@@ -143,7 +143,7 @@
         },
         {
             "id": 6,
-            "name": "Társas Társaság Asztal Társaság Selmecz kirándulás",
+            "name": "TTAT Selmecz kirándulás",
             "date": "2026-08-28",
             "time": "",
             "location": "",
