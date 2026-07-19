@@ -150,6 +150,16 @@
             "description": "",
             "facebookLink": "",
             "visibility": "private"
+        },
+        {
+            "id": 7,
+            "name": "TTAT Csapatépítő",
+            "date": "2026-07-31",
+            "time": "",
+            "location": "",
+            "description": "",
+            "facebookLink": "",
+            "visibility": "private"
         }
     ],
     "gallery": [
