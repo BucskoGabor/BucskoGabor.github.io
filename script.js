@@ -187,15 +187,21 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        membersGridEl.innerHTML = members.map(member => `
+        membersGridEl.innerHTML = members.map(member => {
+            const roles = Array.isArray(member.role)
+                ? member.role
+                : (typeof member.role === 'string' ? member.role.split('\n') : []);
+            const rolesHtml = roles.map(r => `<span class="member-role">${r}</span>`).join('');
+            return `
             <div class="member-card">
                 <img src="${member.image}" alt="${member.name}" class="member-img">
                 <div class="member-info">
                     <h3>${member.name}</h3>
-                    <span class="member-role">${member.role}</span>
+                    ${rolesHtml}
                 </div>
             </div>
-        `).join('');
+            `;
+        }).join('');
     }
 
     function renderEvents(events) {

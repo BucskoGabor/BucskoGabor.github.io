@@ -13,75 +13,75 @@
     "members": [
         {
             "id": 1,
-            "name": "Dózsa Imre Márk vulgo a hangos konfidens\ngame mester avagy szóbelin kocsonya\nde azért szeretem az anime csöcsöket",
-            "role": "Praeses",
-            "image": "images/members/mark.png"
-        },
-        {
-            "id": 2,
-            "name": "Lengyel János alias Az anyag lovas\navagy A Mercédeszek megszállottja",
-            "role": "Major Domus",
-            "image": "images/members/janos.png"
-        },
-        {
-            "id": 3,
-            "name": "Gyöngyösi Dóra Imola alias Empátia Overflow\navagy Cicákat simogatni KÖTELEZŐ(!!) rituálé",
-            "role": "Saufcomissarium",
-            "image": "https://placehold.co/400x400/ec4899/ffffff?text=GyD"
-        },
-        {
-            "id": 4,
-            "name": "Marót Máté alias A króniKussch Krónikás\navagy a kód írás is csak egy boss fight,\nde Informatikusnak lenni?\nAz már csak extra skill!",
-            "role": "Krónikás",
-            "image": "https://placehold.co/400x400/8b5cf6/ffffff?text=MM"
-        },
-        {
-            "id": 5,
             "name": "Bucskó Gábor alias BackendÚr\navagy a Java még hátra van",
-            "role": "Tag",
+            "role": "Elnök (2026-)",
             "image": "images/members/gabor.png"
         },
         {
+            "id": 2,
+            "name": "Baranyai Benedek vulgo Lemegyek tangesbe\navagy követ az őz hee!!",
+            "role": "Pénztáros (2026-)",
+            "image": "images/members/beni.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Dózsa Imre Márk vulgo a hangos konfidens\ngame mester avagy szóbelin kocsonya\nde azért szeretem az anime csöcsöket",
+            "role": "Cantus (2026-)\nElnök (2025-2026)",
+            "image": "images/members/mark.png"
+        },
+        {
+            "id": 4,
+            "name": "Nagy Levente Ferenc vulgo deus EKS machina\navagy az alkohol is csak megfordul bennem",
+            "role": "Krónikás (2026-)",
+            "image": "https://placehold.co/400x400/f43f5e/ffffff?text=NLF"
+        },
+        {
+            "id": 5,
+            "name": "Lengyel János alias Az anyag lovas\navagy A Mercédeszek megszállottja",
+            "role": "Tag\nPénztáros (2025-2026)",
+            "image": "images/members/janos.png"
+        },
+        {
             "id": 6,
+            "name": "Gyöngyösi Dóra Imola alias Empátia Overflow\navagy Cicákat simogatni KÖTELEZŐ(!!) rituálé",
+            "role": "Tag\nSaufcomissarium (2025-2026)",
+            "image": "https://placehold.co/400x400/ec4899/ffffff?text=GyD"
+        },
+        {
+            "id": 7,
+            "name": "Marót Máté alias A króniKussch Krónikás\navagy a kód írás is csak egy boss fight,\nde Informatikusnak lenni?\nAz már csak extra skill!",
+            "role": "Tag\nKrónikás (2025-2026)",
+            "image": "https://placehold.co/400x400/8b5cf6/ffffff?text=MM"
+        },
+        {
+            "id": 8,
             "name": "Tasi Szabolcs alias Sörnyeteg\navagy csinálok még Paksból Chernobyl-t",
             "role": "Tag",
             "image": "https://placehold.co/400x400/06b6d4/ffffff?text=TSz"
         },
         {
-            "id": 7,
+            "id": 9,
             "name": "Laczik Péter alias Demens vagyok",
             "role": "Tag",
             "image": "https://placehold.co/400x400/84cc16/ffffff?text=LP"
         },
         {
-            "id": 8,
+            "id": 10,
             "name": "Bodó Bendegúz vulgo KisBorász Petőfi\navagy hátulról is én vagyok az első",
             "role": "Tag",
             "image": "https://placehold.co/400x400/eab308/ffffff?text=BB"
         },
         {
-            "id": 9,
+            "id": 11,
             "name": "Csákó Balázs alias Az önpusztító blackout nagymester\navagy mindent az utolsó percben",
             "role": "Tag",
             "image": "https://placehold.co/400x400/f43f5e/ffffff?text=CsB"
         },
         {
-            "id": 10,
+            "id": 12,
             "name": "Zajácz Miklós alias Mikey\navagy Billentyűharcos",
             "role": "Tag",
             "image": "https://placehold.co/400x400/f43f5e/ffffff?text=ZM"
-        },
-        {
-            "id": 11,
-            "name": "Baranyai Benedek vulgo Lemegyek tangesbe\navagy követ az őz hee!!",
-            "role": "Tag",
-            "image": "images/members/beni.jpg"
-        },
-        {
-            "id": 12,
-            "name": "Nagy Levente Ferenc vulgo deus EKS machina\navagy az alkohol is csak megfordul bennem",
-            "role": "Tag",
-            "image": "https://placehold.co/400x400/f43f5e/ffffff?text=NLF"
         },
         {
             "id": 13,
