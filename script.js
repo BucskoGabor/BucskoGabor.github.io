@@ -192,11 +192,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 ? member.role
                 : (typeof member.role === 'string' ? member.role.split('\n') : []);
             const rolesHtml = roles.map(r => `<span class="member-role">${r}</span>`).join('');
+            const formattedName = member.name.split('\n').map(line => {
+                return line.split(' ').map(word => `<span style="white-space: nowrap;">${word}</span>`).join(' ');
+            }).join('\n');
             return `
             <div class="member-card">
                 <img src="${member.image}" alt="${member.name}" class="member-img">
                 <div class="member-info">
-                    <h3>${member.name}</h3>
+                    <h3>${formattedName}</h3>
                     ${rolesHtml}
                 </div>
             </div>

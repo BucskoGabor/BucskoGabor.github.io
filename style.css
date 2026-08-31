@@ -712,6 +712,8 @@ nav {
     font-size: 1.25rem;
     margin-bottom: 0.25rem;
     white-space: pre-line;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .member-role {
