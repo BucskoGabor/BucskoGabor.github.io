@@ -160,6 +160,26 @@
             "description": "",
             "facebookLink": "",
             "visibility": "private"
+        },
+        {
+            "id": 8,
+            "name": "Zárt Társas Est",
+            "date": "2026-09-11",
+            "time": "",
+            "location": "",
+            "description": "",
+            "facebookLink": "",
+            "visibility": "private"
+        },
+        {
+            "id": 9,
+            "name": "Komoly Est",
+            "date": "2026-09-11",
+            "time": "",
+            "location": "",
+            "description": "",
+            "facebookLink": "",
+            "visibility": "private"
         }
     ],
     "gallery": [
