@@ -88,6 +88,12 @@
             "name": "Balogh Máté Benedek vulgo Tartalék Energia\navagy Halkan Beszélek de Nagyot Szólok",
             "role": "Tag",
             "image": "https://placehold.co/400x400/f43f5e/ffffff?text=BMB"
+        },
+        {
+            "id": 14,
+            "name": "Krár Boglárka Virág alias A függönyszaggató F{}RM@gyógy][tó\navagy ANYu majd megoldjA",
+            "role": "Tiszteletbeli Tag",
+            "image": "https://placehold.co/400x400/ec4899/ffffff?text=KBV"
         }
     ],
     "events": [
