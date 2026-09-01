@@ -37,27 +37,27 @@
         },
         {
             "id": 5,
+            "name": "Tasi Szabolcs alias Sörnyeteg\navagy csinálok még Paksból Chernobyl-t",
+            "role": "Weinmeister (2026-)",
+            "image": "https://placehold.co/400x400/06b6d4/ffffff?text=TSz"
+        },
+        {
+            "id": 6,
             "name": "Lengyel János alias Az anyag lovas\navagy A Mercédeszek megszállottja",
             "role": "Tag\nPénztáros (2025-2026)",
             "image": "images/members/janos.png"
         },
         {
-            "id": 6,
+            "id": 7,
             "name": "Gyöngyösi Dóra Imola alias Empátia Overflow\navagy Cicákat simogatni KÖTELEZŐ(!!) rituálé",
             "role": "Tag\nSaufcomissarium (2025-2026)",
             "image": "https://placehold.co/400x400/ec4899/ffffff?text=GyD"
         },
         {
-            "id": 7,
+            "id": 8,
             "name": "Marót Máté alias A króniKussch Krónikás\navagy a kód írás is csak egy boss fight,\nde Informatikusnak lenni?\nAz már csak extra skill!",
             "role": "Tag\nKrónikás (2025-2026)",
             "image": "https://placehold.co/400x400/8b5cf6/ffffff?text=MM"
-        },
-        {
-            "id": 8,
-            "name": "Tasi Szabolcs alias Sörnyeteg\navagy csinálok még Paksból Chernobyl-t",
-            "role": "Tag",
-            "image": "https://placehold.co/400x400/06b6d4/ffffff?text=TSz"
         },
         {
             "id": 9,

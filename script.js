@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dialogFbLink = document.getElementById('dialog-fb-link');
 
     // 1. Fetch Data
-    fetch('data.json')
+    fetch('data.json?v=3')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
