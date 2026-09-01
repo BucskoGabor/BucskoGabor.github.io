@@ -703,6 +703,8 @@ nav {
     width: 100%;
     max-width: 350px;
     height: auto;
+    object-fit: cover;
+    object-position: center top;
     border-radius: 12px;
     border: 2px solid var(--accent-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1105,6 +1107,8 @@ footer {
     .member-img {
         width: 120px;
         height: 120px;
+        object-fit: cover;
+        object-position: center top;
     }
 
     .section-header h2 {
