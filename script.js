@@ -227,6 +227,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Game Logic ---
     const games = [
         { name: "Cerevis", type: "Kártyajáték", description: "Hagyományos selmeci kártyajáték 32 lapos magyar kártyával." },
+        { name: "Fajer", type: "Kártyajáték", description: "Hagyományos bursch kártyajáték (Feuer, Schwimmen) 32 lapos magyar kártyával." },
+        { name: "Pisont", type: "Kockajáték", description: "Selmeci hagyományokhoz kötődő kockajáték 2 db hatlapú dobókockával." },
         { name: "Tarokk", type: "Kártyajáték", description: "Stratégiai kártyajáték, melyet speciális tarokk kártyával játszanak." },
         { name: "Ulti", type: "Kártyajáték", description: "Népszerű magyar kártyajáték, rablóulti és talonmáriás változatokkal." }
     ];

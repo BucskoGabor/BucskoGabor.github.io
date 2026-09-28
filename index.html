@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="A Társas Társaság Asztaltársaság hivatalos oldala. Selmeci diákhagyományokat ápoló társaság a Miskolci Egyetemen.">
-    <meta name="keywords" content="társasjáték, asztaltársaság, selmec, hagyományőrzés, közösség, klub, kártyajáték, miskolc, miskolci egyetem, cerevis, sörjáték, bursch, diákhagyomány">
+    <meta name="keywords" content="társasjáték, asztaltársaság, selmec, hagyományőrzés, közösség, klub, kártyajáték, miskolc, miskolci egyetem, cerevis, fajer, pisont, sörjáték, bursch, diákhagyomány">
     <meta name="author" content="Bucskó Gábor">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
@@ -53,6 +53,8 @@
         "Selmeci diákhagyományok",
         "Társasjátékok",
         "Cerevis",
+        "Fajer",
+        "Pisont",
         "Kártyajátékok"
       ]
     }
@@ -89,6 +91,8 @@
                 <button class="nav-btn dropdown-btn">Társasaink &#9662;</button>
                 <div class="dropdown-content">
                     <button class="dropdown-item" data-tab="cerevis">Cerevis</button>
+                    <button class="dropdown-item" data-tab="fajer">Fajer</button>
+                    <button class="dropdown-item" data-tab="pison">Pisont</button>
                     <!-- Add more games here in the future -->
                 </div>
             </div>
@@ -186,6 +190,165 @@
             </div>
 
 
+        </section>
+
+        <!-- Fajer Section (PDF Viewer) -->
+        <section id="fajer" class="section fade-in hidden">
+            <div class="section-header">
+                <h2>Fajer</h2>
+                <p>A Fajer (Feuer, Schwimmen) egy bursch felmenőink által is játszott hagyományos kártyajáték, melyet 32 lapos magyar kártyával játszanak legfeljebb 6 fővel. A játék célja, hogy a cserélgetések során minél magasabb pontértékű 3 lapos kombinációt gyűjtsünk össze a kézben, elkerülve azt, hogy a kör végén a miénk legyen a legkisebb érték.</p>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 2rem; margin-top: 4rem; position: relative; z-index: 10;">
+                <a href="documents/fajer.pdf" target="_blank" class="nav-btn">
+                    Szabályzat letöltése / Megnyitása
+                </a>
+            </div>
+
+            <div class="pdf-container glass-card">
+                <iframe src="documents/fajer.pdf#view=FitH" type="application/pdf" allow="fullscreen">
+                    <p>A böngésződ nem támogatja a PDF-ek megjelenítését. <a href="documents/fajer.pdf">Töltsd le a
+                            szabályzatot ide kattintva.</a></p>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Pisont Section (Rules) -->
+        <section id="pison" class="section fade-in hidden">
+            <div class="section-header">
+                <h2>Pisont</h2>
+                <p>A Pisont egy hagyományos, selmeci diákhagyományokhoz kötődő kockajáték, amelyet bursch felmenőink is előszeretettel játszottak. A játékot két darab hatlapú dobókockával játsszák, minimális eszközigényű, ám halmozódó szorzói és szabályai révén komoly odafigyelést igényel – aki hibázik, annak innia kell!</p>
+            </div>
+
+            <div class="rules-container">
+                <!-- Alapok -->
+                <div class="glass-card rules-card">
+                    <h3>Alapok</h3>
+                    <ul>
+                        <li><strong>Játékosok száma:</strong> 3–10 fő</li>
+                        <li><strong>Szükséges eszköz:</strong> 2 db hatlapú dobókocka</li>
+                        <li><strong>A dobás értéke:</strong> A két kockán lévő számok összege (nem helyi értéke)</li>
+                    </ul>
+                </div>
+
+                <!-- Kezdés -->
+                <div class="glass-card rules-card">
+                    <h3>A játék kezdése</h3>
+                    <p>A „nulladik körben” minden játékos dob egyet a kockákkal. A legkisebb összeget dobó játékos kezdi a tényleges első kört. A nulladik körben dobott értékeknek nincs egyéb következménye.</p>
+                </div>
+
+                <!-- A Pisont tisztség -->
+                <div class="glass-card rules-card rules-card-highlight">
+                    <h3>A „Pisont” tisztség</h3>
+                    <p>Aki a játék kezdetétől (a nulladik kör nem számít) <strong>először dob 2+1-es kombinációt</strong> (azaz összesen 3-at), az lesz a <em>Pisont</em>.</p>
+                    <ul>
+                        <li>A Pisont fejére hagyományosan <strong>papírcsákót</strong> tesznek.</li>
+                        <li>Innentől kezdve minden olyan dobásnál, amelyben a <strong>3-as szám</strong> szerepel (akár mint összeg, akár mint az egyik kocka értéke), a Pisontnak a szorzójának megfelelő kortyot kell innia.</li>
+                        <li>Ha a Pisont újra 2+1-et dob, <strong>kétszeres Pisonttá</strong> válik – a 3-as előfordulásakor már a megnövekedett szorzója lép életbe.</li>
+                        <li>A Pisont az asztalt időlegesen csak <strong>EKS-sel</strong> (kupájának fenékig ürítésével) hagyhatja el.</li>
+                    </ul>
+                </div>
+
+                <!-- Nevezetes dobások -->
+                <div class="glass-card rules-card">
+                    <h3>Nevezetes dobások</h3>
+                    <div class="rules-table-wrapper">
+                        <table class="rules-table">
+                            <thead>
+                                <tr>
+                                    <th>Dobás</th>
+                                    <th>Szabály / Esemény</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>0 + 0 / 0 + 1</strong></td>
+                                    <td>Kocka leesik az asztalról (végzetes hiba): minden játékos fenékig üríti a kupáját (EKS!).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>1 + 1</strong></td>
+                                    <td>A „Legszánalmasabb Dobás”: a dobó játékos iszik 1 kortyot.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2 + 1</strong></td>
+                                    <td>A „Pisont” tisztség megszerzése / halmozása. Az új Pisont tiszteletére minden játékos iszik 1 kortyot.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2 + 2</strong></td>
+                                    <td>Megegyező értékek (felezés): a dobó az egyik kocka értékét (2 korty) megissza, a másik kocka értékét (2 korty) kiosztja egy választott játékosnak.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3 + 1</strong></td>
+                                    <td>Ha van Pisont, a szorzójának megfelelő számú kortyot iszik.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3 + 2</strong></td>
+                                    <td>A dobót megelőző játékos iszik 1 kortyot. Ha van Pisont, a szorzója szerint ő is iszik.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3 + 3</strong></td>
+                                    <td>Mindenki gyorsan megfogja az orrát, a dobó dönt a leglassabbról (1 korty). Megegyező értékek (felezés): az egyik kocka értékét (3 korty) megissza, a másikat (3 korty) kiosztja. A Pisont a szorzója kétszeresét issza.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3 + 4</strong></td>
+                                    <td>A dobót követő játékos iszik 1 kortyot. Ha van Pisont, a szorzója szerint ő is iszik.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>4 + 1</strong></td>
+                                    <td>A dobót megelőző játékos iszik 1 kortyot.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>4 + 2</strong></td>
+                                    <td>Minden játékos gyorsan megfogja az orrát, a dobó dönt ki volt a leglassabb, és rá oszt 1 kortyot.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>4 + 4</strong></td>
+                                    <td>Megegyező értékek (felezés): az egyik kocka értékét (4 korty) megissza, a másikat (4 korty) kiosztja.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>5 + 1</strong></td>
+                                    <td>Ugyanaz, mint a 4 + 2 (orr megfogása, a leglassabb iszik).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>5 + 2</strong></td>
+                                    <td>Ugyanaz, mint a 3 + 4 (a dobót követő játékos iszik 1 kortyot).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>5 + 3</strong></td>
+                                    <td>Minden férfi (srác) iszik 1 kortyot. A Pisont a szorzója szerint iszik.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>5 + 5</strong></td>
+                                    <td>Minden játékos iszik 1 kortyot a legkerekebb dobás tiszteletére. Megegyező értékek (felezés): az egyik kocka értékét (5 korty) megissza, a másikat (5 korty) kiosztja.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>6 + 6</strong></td>
+                                    <td>Megegyező értékek (felezés): az egyik kocka értékét (6 korty) megissza, a másikat (6 korty) kiosztja.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Büntetések és különleges szabályok -->
+                <div class="glass-card rules-card">
+                    <h3>Büntetések és különleges szabályok</h3>
+                    <ul>
+                        <li><strong>Türelmetlen dobó:</strong> Ha valaki azelőtt dob, mielőtt a többiek befejezték volna az ivást, büntetésből meg kell innia az éppen ivók adagját is.</li>
+                        <li><strong>Csaló / jósló dobó:</strong> Ha valaki rázás közben helyesen megtippeli a dobás összegét, a kupáját fenékig kell ürítenie (EKS!).</li>
+                        <li><strong>Hardcore Pisont:</strong> Egyes baráti körökben az összes 6-os szám dupla 3-asnak számít, így a Pisont által elfogyasztott italmennyiség megsokszorozódik.</li>
+                        <li><strong>Többes Pisont:</strong> Az újonnan 2+1-et dobó játékos nem veszi át az előző tisztségét, hanem 2. Pisonttá válik. Már aktív Pisont újbóli 2+1-es dobásával ki-be kapcsolja saját tisztségét.</li>
+                        <li><strong>Távolmaradás:</strong> Ha valaki elhagyja az asztalt, egy szomszédja számolja a rá eső kortyokat. Visszatéréskor a megbízott és a visszatérő együtt issza meg a felgyűlt adagot, ha nem emlékeznek a pontos számra.</li>
+                        <li><strong>Négy név szabálya:</strong> Akinek 4 neve van, arra bármikor ráruházható a Pisont tisztség.</li>
+                    </ul>
+                </div>
+
+                <!-- Megjegyzés -->
+                <div class="glass-card rules-card rules-card-note">
+                    <h3>Megjegyzés</h3>
+                    <p>A Pisont szabályrendszere társaságonként változhat – sok baráti kör saját „háziszabályokat” is alkalmaz. A játék kezdete előtt érdemes tisztázni az adott közösségben érvényes pontokat és büntetéseket. A fenti szabályzat a Selmecen és a Társas Társaság Asztaltársaság által játszott hagyományos változatot mutatja be.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Events Section -->

@@ -523,6 +523,117 @@ nav {
     border-left: 4px solid var(--accent-color);
 }
 
+/* Rules Section (Pisont) */
+.rules-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.rules-card {
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+.rules-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.rules-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.rules-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rules-card ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.rules-card ul li::before {
+    content: '\2022';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.rules-card ul li strong {
+    color: var(--text-primary);
+}
+
+.rules-card-highlight {
+    border-left: 4px solid var(--accent-color);
+    background: rgba(51, 65, 85, 0.05);
+}
+
+.rules-card-note {
+    border-left: 4px solid var(--accent-glow);
+    background: rgba(100, 116, 139, 0.05);
+}
+
+.rules-card-note p {
+    font-style: italic;
+}
+
+.rules-table-wrapper {
+    overflow-x: auto;
+}
+
+.rules-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 0.5rem;
+}
+
+.rules-table th,
+.rules-table td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.rules-table th {
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rules-table td:first-child {
+    white-space: nowrap;
+    width: 100px;
+    font-family: 'Outfit', monospace;
+    font-size: 1.05rem;
+}
+
+.rules-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.rules-table tbody tr:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.rules-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
 /* About Section */
 .about-card {
     padding: 4rem;
