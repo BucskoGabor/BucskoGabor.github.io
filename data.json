@@ -73,7 +73,7 @@
         },
         {
             "id": 11,
-            "name": "Csákó Balázs alias Az önpusztító blackout nagymester\navagy mindent az utolsó percben",
+            "name": "Csákó Balázs alias Az önpusztító blackout nagymestere\navagy mindent az utolsó percben",
             "role": "Tag",
             "image": "https://placehold.co/400x400/f43f5e/ffffff?text=CsB"
         },
@@ -179,13 +179,63 @@
         },
         {
             "id": 9,
-            "name": "Komoly Est",
+            "name": "Társas és Komoly Est",
             "date": "2026-09-11",
             "time": "",
             "location": "",
             "description": "",
             "facebookLink": "",
             "visibility": "private"
+        },
+        {
+            "id": 10,
+            "name": "Zárt Társas Est",
+            "date": "2026-09-26",
+            "time": "",
+            "location": "",
+            "description": "",
+            "facebookLink": "",
+            "visibility": "private"
+        },
+        {
+            "id": 11,
+            "name": "Zárt Társas és Komoly Est",
+            "date": "2026-10-10",
+            "time": "",
+            "location": "",
+            "description": "",
+            "facebookLink": "",
+            "visibility": "private"
+        },
+        {
+            "id": 12,
+            "name": "Főzés",
+            "date": "2026-10-21",
+            "time": "",
+            "location": "",
+            "description": "Több információ hamarosan",
+            "facebookLink": "",
+            "visibility": "public"
+        },
+        {
+            "id": 13,
+            "name": "Forraltborozás",
+            "date": "2026-11-12",
+            "time": "",
+            "location": "",
+            "description": "Több információ hamarosan",
+            "facebookLink": "",
+            "visibility": "public"
+        },
+        {
+            "id": 14,
+            "name": "Nyilt Társas Est",
+            "date": "2026-11-25",
+            "time": "",
+            "location": "",
+            "description": "Több információ hamarosan",
+            "facebookLink": "",
+            "visibility": "public"
         }
     ],
     "gallery": [
