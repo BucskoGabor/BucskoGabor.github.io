@@ -169,7 +169,7 @@
         },
         {
             "id": 8,
-            "name": "Zárt Társas Est",
+            "name": "Zárt Társas és Komoly Est",
             "date": "2026-09-11",
             "time": "",
             "location": "",
@@ -179,16 +179,6 @@
         },
         {
             "id": 9,
-            "name": "Zárt Társas és Komoly Est",
-            "date": "2026-09-11",
-            "time": "",
-            "location": "",
-            "description": "",
-            "facebookLink": "",
-            "visibility": "private"
-        },
-        {
-            "id": 10,
             "name": "Zárt Társas Est",
             "date": "2026-09-26",
             "time": "",
@@ -198,7 +188,7 @@
             "visibility": "private"
         },
         {
-            "id": 11,
+            "id": 10,
             "name": "Zárt Társas és Komoly Est",
             "date": "2026-10-10",
             "time": "",
@@ -208,7 +198,7 @@
             "visibility": "private"
         },
         {
-            "id": 12,
+            "id": 11,
             "name": "Főzés",
             "date": "2026-10-21",
             "time": "",
@@ -218,7 +208,7 @@
             "visibility": "public"
         },
         {
-            "id": 13,
+            "id": 12,
             "name": "Forraltborozás",
             "date": "2026-11-12",
             "time": "",
@@ -228,7 +218,7 @@
             "visibility": "public"
         },
         {
-            "id": 14,
+            "id": 13,
             "name": "Nyílt Társas Est",
             "date": "2026-11-25",
             "time": "",
